@@ -35,6 +35,11 @@ header {
   display: flex;
   justify-content: space-between;
 }
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
 @media (max-width: 600px) {
   .campaign-banner-image {
     width: 168px;
@@ -48,4 +53,8 @@ header {
     flex-direction: column;
     justify-content: space-between;
   }
+  /* .campaign-product-image {
+    width: 374.81px;
+    height: 245px;
+  } */
 }
