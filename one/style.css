@@ -21,13 +21,20 @@ header {
   border-bottom: 1px solid #dddddd;
 }
 
+.container {
+  max-width: 1185px;
+  width: 100%;
+}
 .campaign-heading-text {
   font-family: "Samsung Sharp Sans Bold", sans-serif;
   font-weight: 700;
   font-size: 36px;
   line-height: 45.29px;
 }
-
+.campaign-product-container {
+  display: flex;
+  justify-content: space-between;
+}
 @media (max-width: 600px) {
   .campaign-banner-image {
     width: 168px;
@@ -36,5 +43,9 @@ header {
   .campaign-heading-text {
     font-size: 20px;
     line-height: 25.16px;
+  }
+  .campaign-product-container {
+    flex-direction: column;
+    justify-content: space-between;
   }
 }
