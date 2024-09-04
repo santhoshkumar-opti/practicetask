@@ -126,7 +126,12 @@ body {
 .mobile-text {
   display: none;
 }
-@media (max-width: 600px) {
+@media (max-width: 1364px) {
+  .campaign-product-container, .service-groups {
+    padding-inline: 20px;
+  }
+}
+@media (max-width: 957px) {
   .campaign-banner-image {
     width: 168px;
     height: 51px;
