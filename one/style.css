@@ -1,3 +1,6 @@
+.h-100 {
+  height: 100% !important;
+}
 .m-0 {
   margin: 0px !important;
 }
@@ -12,9 +15,16 @@
 .d-flex {
   display: flex;
 }
+.flex-column {
+  flex-direction: column;
+}
 
 .justify-content-center {
   justify-content: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
 }
 
 header {
@@ -22,7 +32,7 @@ header {
 }
 
 .container {
-  max-width: 1185px;
+  max-width: 1320px;
   width: 100%;
 }
 .campaign-heading-text {
@@ -31,11 +41,23 @@ header {
   font-size: 36px;
   line-height: 45.29px;
 }
-.campaign-product-container {
-  display: flex;
-  justify-content: space-between;
+.campaign-product-content {
+  
 }
-
+.campaign-product-content-title {
+  margin-top: 20px !important;
+  font-family: "Samsung Sharp Sans Bold", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 37.74px;
+}
+.campaign-product-content-description {
+  margin-top: 20px !important;
+  font-family: "SamsungOne 400", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28.78px;
+}
 .img-fluid {
   max-width: 100%;
   height: auto;
@@ -52,6 +74,22 @@ header {
   .campaign-product-container {
     flex-direction: column;
     justify-content: space-between;
+  }
+  .campaign-product-content {
+    align-items: center;
+  }
+  .campaign-product-content-title {
+    font-size: 20px;
+    line-height: 25.16px;
+    text-align: center;
+    margin-inline: 100px !important;
+  }
+  .campaign-product-content-description {
+    margin-top: 8px !important;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.19px;
+    text-align: center;
   }
   /* .campaign-product-image {
     width: 374.81px;
