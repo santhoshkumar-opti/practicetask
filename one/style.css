@@ -1,12 +1,12 @@
 .m-0 {
-    margin: 0px !important;
+  margin: 0px !important;
 }
 .pt-3 {
-    padding-top: 1rem !important;
+  padding-top: 1rem !important;
 }
 
 .text-center {
-    text-align: center;
+  text-align: center;
 }
 
 .d-flex {
@@ -22,7 +22,15 @@ header {
 }
 
 .campaign-heading-text {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 45.29px;
+  font-family: "Samsung Sharp Sans Bold", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 45.29px;
+}
+
+@media (max-width: 600px) {
+  .campaign-heading-text {
+    font-size: 20px;
+    line-height: 25.16px;
+  }
 }
