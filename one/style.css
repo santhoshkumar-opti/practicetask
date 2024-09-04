@@ -42,6 +42,13 @@ footer {
   padding-block: 20px;
 }
 
+body {
+  margin: 0px;
+}
+
+.brand-image {
+  margin-block: 15px;
+}
 .container {
   max-width: 1320px;
   width: 100%;
