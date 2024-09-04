@@ -58,6 +58,22 @@ header {
   font-size: 24px;
   line-height: 28.78px;
 }
+.campaign-product-content-button {
+  margin-top: 40px !important;
+  width: 229px;
+  height: 38px;
+  border-radius: 25px;
+  background-color: #1428A0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.campaign-product-content-button-text {
+  font-family: sans-serif;
+  font-size: 14px;
+  line-height: 16.41px;
+  color: white;
+}
 .img-fluid {
   max-width: 100%;
   height: auto;
@@ -90,6 +106,9 @@ header {
     font-size: 16px;
     line-height: 19.19px;
     text-align: center;
+  }
+  .campaign-product-content-button {
+    margin-block: 20px !important;
   }
   /* .campaign-product-image {
     width: 374.81px;
