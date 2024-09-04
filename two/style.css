@@ -1,0 +1,236 @@
+.pt-sans-regular {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.pt-sans-bold {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.pt-sans-regular-italic {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.pt-sans-bold-italic {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+main {
+  margin-top: 2rem;
+  width: 90%;
+  margin-inline: auto;
+}
+footer {
+  margin-top: 2rem;
+}
+.h-100 {
+  height: 100% !important;
+}
+.w-100 {
+  width: 100% !important;
+}
+.m-0 {
+  margin: 0px !important;
+}
+.pt-3 {
+  padding-top: 1rem !important;
+}
+.text-center {
+  text-align: center;
+}
+
+.d-flex {
+  display: flex;
+}
+.flex-column {
+  flex-direction: column;
+}
+.align-items-center {
+  align-items: center;
+}
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.cta {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.cta:hover {
+  background-color: #0056b3;
+}
+
+/* Popup Overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Hidden class */
+.hidden {
+  display: none;
+}
+
+/* Popup Container */
+.popup-container {
+  background-color: #fff;
+  /* padding: 20px; */
+  border-radius: 8px;
+  max-width: 740px;
+  width: 90%;
+  position: relative;
+  overflow: hidden;
+  /* text-align: center; */
+}
+
+/* Close Icon */
+.close-icon {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  font-size: 24px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Popup Button */
+.popup-button {
+  padding: 10px 20px;
+  margin: 15px 0;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.popup-button:hover {
+  background-color: #218838;
+}
+
+
+.login-link:hover {
+  text-decoration: underline;
+}
+
+.main-container {
+  display: flex;
+}
+
+.image-block {
+  flex: 0.4;
+  background-image: url("./assets/MabPopUp.jpg");
+  background-size: cover;
+}
+
+.content-block {
+  flex: 0.6;
+  padding: 25px;
+}
+
+.content-title {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 28px;
+  text-align: center;
+}
+
+.hightlight {
+  color: #df720c;
+}
+
+.lists {
+  display: flex;
+  flex-direction: column;
+}
+
+.list:not(:last-child) {
+  margin-bottom: 20px;
+}
+.image-holder {
+  display: flex;
+  justify-content: start;
+  margin-right: 10px;
+}
+.list-title {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20.7px;
+}
+.list-description {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20.7px;
+}
+.get-started-button {
+  width: 279px;
+  height: 47px;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: #df720c;
+}
+.get-started-button-text {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23.29px;
+  text-align: center;
+  color: #ffffff;
+}
+.already-have-account {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18.12px;
+  margin-top: 1rem !important;
+}
+.login-link {
+    margin-left: 10px;
+    color: black;
+}

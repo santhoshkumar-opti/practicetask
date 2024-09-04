@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Popup</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- CTA Button -->
+    <button id="cta-button" class="cta">Click Me</button>
+
+    <!-- Popup Overlay -->
+    <div id="popup-overlay" class="popup-overlay hidden">
+        <div class="popup-container">
+            <span class="close-icon" id="close-icon">
+                <img src="./assets/crossIcon.svg" width="12" height="12" alt="close icon" />
+            </span>
+            <div class="main-container">
+                <div class="image-block"></div>
+                <div class="content-block">
+                    <header>
+                        <h1 class="m-0 content-title">
+                            Join Mable for <span class="hightlight">FREE</span> to view <br />
+                            support workers profiles
+                        </h1>
+                    </header>
+                    <main>
+                        <section class="lists">
+                            <div class="list d-flex">
+                                <div class="image-holder">
+                                    <img src="./assets/checkIcon.svg" width="22" height="22" alt="check mark" srcset="">
+                                </div>
+                                <div>
+                                    <p class="m-0 list-title">
+                                        Peace of mind
+                                    </p>
+                                    <p class="m-0 list-description">
+                                        Each independent support worker has been verified with both police checks and
+                                        references.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="list d-flex">
+                                <div class="image-holder">
+                                    <img src="./assets/checkIcon.svg" width="22" height="22" alt="check mark" srcset="">
+                                </div>
+                                <div>
+                                    <p class="m-0 list-title">
+                                        Better value support
+                                    </p>
+                                    <p class="m-0 list-description">
+                                        Because we’re online, our costs are lower. We pass the savings onto you!
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="list d-flex">
+                                <div class="image-holder">
+                                    <img src="./assets/checkIcon.svg" width="22" height="22" alt="check mark" srcset="">
+                                </div>
+                                <div>
+                                    <p class="m-0 list-title">
+                                        Freedom of choice
+                                    </p>
+                                    <p class="m-0 list-description">
+                                        Enjoy the freedom and flexibility that comes with having a direct relationship
+                                        with your support team.
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                    </main>
+                    <footer class="d-flex flex-column align-items-center">
+                        <button class="get-started-button get-started-button-text" id="get-started">
+                            Let’s get started
+                        </button>
+                        <p class="m-0 already-have-account">
+                            Already have an account?<a href="https://www.google.com" class="login-link" id="login-link">Login here</a>
+                        </p>
+                    </footer>
+                </div>
+            </div>
+            <!-- <h2>Welcome to Our Site!</h2>
+            <p>We're glad you're here. Let's get you started.</p>
+            <button class="popup-button" id="get-started">Let’s Get Started</button>
+            <a href="https://www.google.com" class="login-link" id="login-link">Login here</a> -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
