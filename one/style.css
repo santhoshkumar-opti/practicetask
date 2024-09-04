@@ -41,9 +41,6 @@ header {
   font-size: 36px;
   line-height: 45.29px;
 }
-.campaign-product-content {
-  
-}
 .campaign-product-content-title {
   margin-top: 20px !important;
   font-family: "Samsung Sharp Sans Bold", sans-serif;
@@ -78,6 +75,12 @@ header {
   max-width: 100%;
   height: auto;
 }
+.desktop-text {
+  display: inline-block;
+}
+.mobile-text {
+  display: none;
+}
 @media (max-width: 600px) {
   .campaign-banner-image {
     width: 168px;
@@ -98,7 +101,6 @@ header {
     font-size: 20px;
     line-height: 25.16px;
     text-align: center;
-    margin-inline: 100px !important;
   }
   .campaign-product-content-description {
     margin-top: 8px !important;
@@ -110,8 +112,11 @@ header {
   .campaign-product-content-button {
     margin-block: 20px !important;
   }
-  /* .campaign-product-image {
-    width: 374.81px;
-    height: 245px;
-  } */
+
+  .desktop-text {
+    display: none;
+  }
+  .mobile-text {
+    display: inline-block;
+  }
 }
