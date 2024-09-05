@@ -149,7 +149,6 @@ footer {
   background-color: #218838;
 }
 
-
 .login-link:hover {
   text-decoration: underline;
 }
@@ -231,6 +230,14 @@ footer {
   margin-top: 1rem !important;
 }
 .login-link {
-    margin-left: 10px;
-    color: black;
+  margin-left: 5px;
+  color: black;
+}
+@media (max-width: 957px) {
+    .main-container {
+      flex-direction: column;
+    }
+    .image-block {
+      min-height: 100px !important;
+    }
 }
