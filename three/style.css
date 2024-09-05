@@ -1,55 +1,50 @@
 .h-100 {
-    height: 100% !important;
-  }
-  .w-100 {
-    width: 100% !important;
-  }
-  .m-0 {
-    margin: 0px !important;
-  }
-  .pt-3 {
-    padding-top: 1rem !important;
-  }
-  
-  .text-center {
-    text-align: center;
-  }
-  
-  .d-flex {
-    display: flex;
-  }
-  .flex-column {
-    flex-direction: column;
-  }
-  .align-items-center {
-    align-items: center;
-  }
-  .justify-content-center {
-    justify-content: center;
-  }
-  
-  .justify-content-between {
-    justify-content: space-between;
-  }
-  
-  header {
-    border-bottom: 1px solid #dddddd;
-  }
-  
-  footer {
-    margin-top: 20px;
-    background-color: #f4f4f4;
-    padding-block: 20px;
-  }
-  
-  body {
-    margin: 0px;
-  }
-  
-  .brand-image {
-    margin-block: 15px;
-  }
-  .container {
-    max-width: 1348px;
-    width: 100%;
-  }
+  height: 100% !important;
+}
+.w-100 {
+  width: 100% !important;
+}
+.m-0 {
+  margin: 0px !important;
+}
+.pt-3 {
+  padding-top: 1rem !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.d-flex {
+  display: flex;
+}
+.flex-column {
+  flex-direction: column;
+}
+.align-items-center {
+  align-items: center;
+}
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+
+body {
+  margin: 0px;
+}
+
+.container {
+  max-width: 1348px;
+  width: 100%;
+}
+.standard-delivery-heading {
+  font-family: "Proxima Nova Condensed", sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 38.98px;
+  text-align: center;
+}

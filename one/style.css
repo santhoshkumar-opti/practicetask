@@ -59,7 +59,7 @@ body {
   font-size: 36px;
   line-height: 45.29px;
 }
-.campaign-product-container  {
+.campaign-product-container {
   margin-top: 15px;
 }
 .campaign-product-content-title {
@@ -127,7 +127,8 @@ body {
   display: none;
 }
 @media (max-width: 1364px) {
-  .campaign-product-container, .service-groups {
+  .campaign-product-container,
+  .service-groups {
     padding-inline: 20px;
   }
 }
