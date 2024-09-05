@@ -10,12 +10,80 @@
 .m-0 {
   margin: 0px !important;
 }
+.mt-5 {
+  margin-top: 3rem !important;
+}
+.mt-4 {
+  margin-top: 1.5rem !important;
+}
+.mt-3 {
+  margin-top: 1rem !important;
+}
+
+.mt-2 {
+  margin-top: .5rem !important;
+}
+.mt-1 {
+  margin-top: .25rem !important;
+}
+.mt-0 {
+  margin-top: 0 !important;
+}
+.mx-5 {
+  margin-right: 3rem !important;
+  margin-left: 3rem !important;
+}
+.mx-4 {
+  margin-right: 1.5rem !important;
+  margin-left: 1.5rem !important;
+}
+.mx-3 {
+  margin-right: 1rem !important;
+  margin-left: 1rem !important;
+}
+.mx-2 {
+  margin-right: 0.5rem !important;
+  margin-left: 0.5rem !important;
+}
+.mx-1 {
+  margin-right: 0.25rem !important;
+  margin-left: 0.25rem !important;
+}
+.mx-0 {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+.mx-auto {
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+.my-5 {
+  margin-top: 3rem !important;
+  margin-bottom: 3rem !important;
+}
+.my-4 {
+  margin-top: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
+}
+.my-3 {
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+}
+.my-2 {
+  margin-top: .5rem !important;
+  margin-bottom: .5rem !important;
+}
 .my-1 {
   margin-top: .25rem !important;
   margin-bottom: .25rem !important;
 }
+
+.my-0 {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
 .border-bottom {
-  border-bottom: 1px solid #D6CFC9;
+  border-bottom: 1px solid #d6cfc9;
 }
 .pt-2 {
   padding-top: 0.5rem !important;
@@ -50,7 +118,7 @@ body {
 }
 
 .container {
-  max-width: 1348px;
+  max-width: 872px;
   width: 100%;
 }
 .standard-delivery-heading {
@@ -96,7 +164,6 @@ thead {
   line-height: 17.05px;
 }
 
-
 .table-body-text-title {
   font-family: "Proxima Nova Condensed", sans-serif;
   font-weight: 700;
@@ -118,4 +185,22 @@ thead {
 }
 td:last-child > p {
   text-align: end !important;
+}
+
+.paragraph {
+  font-family: "Proxima Nova Condensed", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+section > h3 {
+  font-family: "Proxima Nova Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 26.8px;
+}
+
+p > a {
+  color: inherit;
 }
