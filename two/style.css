@@ -114,9 +114,10 @@ footer {
   border-radius: 8px;
   max-width: 740px;
   width: 90%;
+  max-height: 90%;
   position: relative;
-  overflow: hidden;
   /* text-align: center; */
+  overflow-y: auto;
 }
 
 /* Close Icon */
@@ -159,8 +160,10 @@ footer {
 
 .image-block {
   flex: 0.4;
-  background-image: url("./assets/MabPopUp.jpg");
+  background-image: url("./assets/web_responsive_group.jpg");
   background-size: cover;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
 }
 
 .content-block {
@@ -238,6 +241,7 @@ footer {
       flex-direction: column;
     }
     .image-block {
+      background-image: url("./assets/mobile_responsive_group.png");
       min-height: 100px !important;
     }
 }
