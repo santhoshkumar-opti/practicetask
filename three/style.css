@@ -115,6 +115,7 @@
 
 body {
   margin: 0px;
+  padding-inline: 20px;
 }
 
 .container {
@@ -203,4 +204,49 @@ section > h3 {
 
 p > a {
   color: inherit;
+}
+
+@media (max-width: 769px) {
+  .standard-delivery-heading {
+    text-align: start;
+  }
+  main {
+    overflow: auto;
+  }
+  table {
+    width: 438px;
+  }
+  table > thead >  tr > th {
+    vertical-align: top;
+  }
+  .table-head-column {
+    padding: 16px;
+  }
+  .table-head-text-title {
+    font-size: 13px;
+    line-height: 15.83px;
+  }
+  .table-head-text-description {
+    font-size: 12px;
+    line-height: 14.62px;
+  }
+  .table-body-text-title {
+    font-size: 13px;
+    line-height: 15.83px;
+  }
+  .table-body-text-description {
+    font-size: 12px;
+    line-height: 14.62px;
+  }
+  .info-message {
+    font-size: 12px;
+    line-height: 14.62px;
+  }
+  .table-body-column {
+    padding: 16px;
+  }
+
+  th:not(:last-child), td:not(:last-child) {
+    border-right: 1px solid #D6CFC9;
+  }
 }
