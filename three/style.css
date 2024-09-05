@@ -7,6 +7,13 @@
 .m-0 {
   margin: 0px !important;
 }
+.my-1 {
+  margin-top: .25rem !important;
+  margin-bottom: .25rem !important;
+}
+.border-bottom {
+  border-bottom: 1px solid #D6CFC9;
+}
 .pt-2 {
   padding-top: 0.5rem !important;
 }
@@ -94,6 +101,18 @@ thead {
   line-height: 21.92px;
 }
 
+.table-body-text-description {
+  font-family: "Proxima Nova Condensed", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17.05px;
+}
+.info-message {
+  font-family: "Proxima Nova Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17.05px;
+}
 td:last-child > p {
   text-align: end !important;
 }
