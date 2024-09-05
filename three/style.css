@@ -93,3 +93,7 @@ thead {
   font-size: 18px;
   line-height: 21.92px;
 }
+
+td:last-child > p {
+  text-align: end !important;
+}
