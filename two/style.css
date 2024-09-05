@@ -237,11 +237,25 @@ footer {
   color: black;
 }
 @media (max-width: 957px) {
-    .main-container {
-      flex-direction: column;
-    }
-    .image-block {
-      background-image: url("./assets/mobile_responsive_group.png");
-      min-height: 100px !important;
-    }
+
+  .close-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  .main-container {
+    flex-direction: column;
+  }
+  .image-block {
+    background-image: url("./assets/mobile_responsive_group.png");
+    min-height: 100px !important;
+  }
+
+}
+
+@media (max-width: 425px) {
+
+  main {
+    width: 100%;
+  }
 }
