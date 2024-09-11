@@ -116,6 +116,7 @@ function createPopup() {
   if (document.querySelector("#popup-overlay")) {
     popupOverlay = document.querySelector("#popup-overlay");
     closeIcon = document.querySelector("#close-icon");
+    noThanksButton = document.querySelector("#no-thanks");
     screen1 = document.querySelector("#screen1");
     screen2 = document.querySelector("#screen2");
     nameInput = document.querySelector("#name");
