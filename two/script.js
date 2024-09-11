@@ -103,9 +103,26 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 function createPopup() {
   var popupOverlay;
+  var closeIcon;
+  var noThanksButton;
+  var screen1;
+  var screen2;
+  var nameInput;
+  var nameError;
+  var emailInput;
+  var emailError;
+  var form;
   // if popup is already exist
   if (document.querySelector("#popup-overlay")) {
     popupOverlay = document.querySelector("#popup-overlay");
+    closeIcon = document.querySelector("#close-icon");
+    screen1 = document.querySelector("#screen1");
+    screen2 = document.querySelector("#screen2");
+    nameInput = document.querySelector("#name");
+    nameError = document.querySelector("#nameError");
+    emailInput = document.querySelector("#email");
+    emailError = document.querySelector("#emailError");
+    form = document.querySelector("#onPopupForm");
   } else {
     // Create the main popup overlay container
     popupOverlay = document.createElement("div");
@@ -117,7 +134,7 @@ function createPopup() {
     popupContainer.className = "popup-container";
 
     // Create the close icon
-    const closeIcon = document.createElement("span");
+    closeIcon = document.createElement("span");
     closeIcon.id = "close-icon";
     closeIcon.className = "close-icon";
     closeIcon.innerHTML = "&#10005;";
@@ -135,7 +152,7 @@ function createPopup() {
     contentBlock.className = "content-block";
 
     // Create the first section (screen1)
-    const screen1 = document.createElement("section");
+    screen1 = document.createElement("section");
     screen1.id = "screen1";
     screen1.className = "screen section-login";
 
@@ -149,18 +166,18 @@ function createPopup() {
     screen1Description.textContent =
       "Be the first to get the latest news about trends, promotions, and much more!";
 
-    const form = document.createElement("form");
+    form = document.createElement("form");
     form.id = "onPopupForm";
 
     const nameGroup = document.createElement("div");
     nameGroup.className = "form-group mt-1";
-    const nameInput = document.createElement("input");
+    nameInput = document.createElement("input");
     nameInput.type = "text";
     nameInput.id = "name";
     nameInput.className = "input-font-style input-size";
     nameInput.name = "name";
     nameInput.placeholder = "Your Name";
-    const nameError = document.createElement("div");
+    nameError = document.createElement("div");
     nameError.id = "nameError";
     nameError.className = "validation-error";
     nameGroup.appendChild(nameInput);
@@ -168,13 +185,13 @@ function createPopup() {
 
     const emailGroup = document.createElement("div");
     emailGroup.className = "form-group mt-1";
-    const emailInput = document.createElement("input");
+     emailInput = document.createElement("input");
     emailInput.type = "text";
     emailInput.id = "email";
     emailInput.className = "input-font-style input-size";
     emailInput.name = "email";
     emailInput.placeholder = "Your Email";
-    const emailError = document.createElement("div");
+     emailError = document.createElement("div");
     emailError.id = "emailError";
     emailError.className = "validation-error";
     emailGroup.appendChild(emailInput);
@@ -185,7 +202,7 @@ function createPopup() {
     submitButton.className = "form-submit-style form-submit-font-style mt-2";
     submitButton.textContent = "Join Now";
 
-    const noThanksButton = document.createElement("button");
+    noThanksButton = document.createElement("button");
     noThanksButton.type = "button";
     noThanksButton.id = "no-thanks";
     noThanksButton.className = "mt-3 ignore-button";
@@ -201,7 +218,7 @@ function createPopup() {
     screen1.appendChild(noThanksButton);
 
     // Create the second section (screen2)
-    const screen2 = document.createElement("section");
+    screen2 = document.createElement("section");
     screen2.id = "screen2";
     screen2.className = "screen section-thankyou";
 
