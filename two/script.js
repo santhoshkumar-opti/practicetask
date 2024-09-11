@@ -259,24 +259,25 @@ function createPopup() {
 
   // Close Popup on clicking the close icon
   closeIcon.addEventListener("click", () => {
-    popupOverlay.classList.add("hidden");
+    closePop();
   });
 
   // Close Popup on clicking outside the popup container
   popupOverlay.addEventListener("click", (e) => {
     if (e.target === popupOverlay) {
-      popupOverlay.classList.add("hidden");
+      closePop();
     }
   });
 
-  // Close Popup on clicking the "Let's Get Started" button
+  // Close Popup on clicking the "no thanks" button
   noThanksButton.addEventListener("click", () => {
-    popupOverlay.classList.add("hidden");
+    closePop();
   });
 
   // Function to open a popup
   function openPopup() {
     popupOverlay.classList.remove("hidden");
+    document.body.style.overflow = 'hidden';
     screen1.classList.add("active");
     screen2.classList.remove("active");
 
@@ -287,6 +288,13 @@ function createPopup() {
     // Clear previous errors
     nameError.textContent = "";
     emailError.textContent = "";
+  }
+
+  // Function to close a popup
+  function closePop() {
+    popupOverlay.classList.add("hidden");
+    document.body.style.overflow = '';
+
   }
 
   form.addEventListener("submit", (event) => {
