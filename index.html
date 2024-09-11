@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialog Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .dialog {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        .screen {
+            display: none;
+        }
+
+        .screen.active {
+            display: block;
+        }
+
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div id="dialog" class="dialog">
+        <div id="screen1" class="screen active">
+            <h2>Form</h2>
+            <form id="form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+                <div id="nameError" class="error"></div>
+
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email">
+                <div id="emailError" class="error"></div>
+
+                <button type="button" onclick="submitForm()">Submit</button>
+            </form>
+        </div>
+        <div id="screen2" class="screen">
+            <h2>Thank You!</h2>
+            <p>Your submission has been received.</p>
+        </div>
+    </div>
+
+    <script>
+        // Show the dialog when the page loads
+        window.onload = function() {
+            document.getElementById('dialog').style.display = 'block';
+        };
+
+        // Function to validate form and switch screens
+        function submitForm() {
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const nameError = document.getElementById('nameError');
+            const emailError = document.getElementById('emailError');
+
+            const nameValue = nameInput.value.trim();
+            const emailValue = emailInput.value.trim();
+
+            // Clear previous errors
+            nameError.textContent = '';
+            emailError.textContent = '';
+
+            let valid = true;
+
+            // Name validation: only letters
+            const nameRegex = /^[A-Za-z]+$/;
+            if (!nameValue) {
+                nameError.textContent = 'Name is required.';
+                valid = false;
+            } else if (!nameRegex.test(nameValue)) {
+                nameError.textContent = 'Name must contain only letters.';
+                valid = false;
+            }
+
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailValue) {
+                emailError.textContent = 'Email is required.';
+                valid = false;
+            } else if (!emailRegex.test(emailValue)) {
+                emailError.textContent = 'Invalid email format.';
+                valid = false;
+            }
+
+            // If valid, switch screens
+            if (valid) {
+                document.getElementById('screen1').classList.remove('active');
+                document.getElementById('screen2').classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
