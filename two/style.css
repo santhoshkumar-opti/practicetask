@@ -1,28 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
 
-.pt-sans-regular {
-  font-family: "PT Sans", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.pt-sans-bold {
-  font-family: "PT Sans", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.pt-sans-regular-italic {
-  font-family: "PT Sans", sans-serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.pt-sans-bold-italic {
-  font-family: "PT Sans", sans-serif;
-  font-weight: 700;
-  font-style: italic;
-}
 
 /* General Styles */
 body {
@@ -35,12 +12,19 @@ body {
   margin: 0;
 }
 
+h1,
+p {
+  margin: 0px;
+}
+
 .mt-5 {
   margin-top: 3rem !important;
 }
+
 .mt-4 {
   margin-top: 1.5rem !important;
 }
+
 .mt-3 {
   margin-top: 1rem !important;
 }
@@ -48,9 +32,11 @@ body {
 .mt-2 {
   margin-top: 0.5rem !important;
 }
+
 .mt-1 {
   margin-top: 0.25rem !important;
 }
+
 .mt-0 {
   margin-top: 0 !important;
 }
@@ -133,7 +119,7 @@ body {
 .popup-container {
   background-color: #fff;
   width: 972px;
-  height: 558px;
+  max-height: 558px;
   position: relative;
   overflow: hidden;
 }
@@ -230,9 +216,9 @@ body {
 
 .form-group {
   width: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: self-start;
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
 }
 
 input:focus-visible {
@@ -264,6 +250,7 @@ input:focus-visible {
   color: #FF0404;
   margin-left: 15px;
 }
+
 .form-submit-style {
   width: 80%;
   height: 55px;
@@ -318,10 +305,19 @@ input:focus-visible {
 
 @media (max-width: 957px) {
 
+  .popup-container {
+
+    top: 20px;
+    position: absolute;
+
+    width: 93vw;
+    max-height: 595px;
+  }
+
   .close-icon {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 10px;
+    right: 10px;
 
     background: white;
     border-radius: 50%;
@@ -332,15 +328,63 @@ input:focus-visible {
   }
 
   .image-block {
-    background-image: url("./assets/mobile_responsive_group.png");
-    min-height: 100px !important;
+    background-image: url("./assets/mobile_responsive_pic.png");
+    min-height: 238px !important;
   }
 
-}
+  .section-login {
+    margin-block: 0px;
+  }
 
-@media (max-width: 425px) {
+  #screen1 > .content-title-font-style {
+    font-size: 21px;
+    line-height: 22px;
+  }
 
-  main {
+  .content-title-size {
+    margin-block: 0px !important;
+    padding-inline: 0px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .content-description-font-style {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .content-description-size {
+    margin-bottom: 15px !important;
+  }
+
+  .form-group {
     width: 100%;
   }
+
+  .input-size {
+    height: 47px;
+  }
+
+  .content-block {
+    padding: 23px 14px;
+    justify-content: center;
+  }
+
+  .validation-error {
+    font-size: 10px;
+    line-height: 18px;
+    height: 15px;
+  }
+
+  .form-submit-style {
+    width: 100%;
+    height: 48px;
+  }
+
+  .ignore-button {
+    margin-top: 0.25rem !important;
+  }
+
+  #screen2 {
+    margin-bottom: 10px;
+}
 }
