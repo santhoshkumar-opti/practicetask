@@ -151,6 +151,7 @@
     width: 100%;
     background-color: #000000;
 }
+
 .test-5-sub-navbar-container {
     height: 50px;
     width: 100%;
@@ -269,7 +270,7 @@
     padding: 0px;
 }
 
-.test-5-menu-bars > hr:nth-child(n) {
+.test-5-menu-bars>hr:nth-child(n) {
     color: #ffffff;
     border: 1.1px solid #ffffff;
     width: 100%;
@@ -279,16 +280,18 @@
     border-radius: 5px;
 }
 
-.test-5-menu-bars > hr:not(:last-child) {
+.test-5-menu-bars>hr:not(:last-child) {
     margin-bottom: 6px;
 
 }
+
 nav.test-5-desktop {
     width: fit-content;
     height: 100%;
     margin: auto;
 }
-nav.test-5-desktop > ul {
+
+nav.test-5-desktop>ul {
     list-style-type: none;
     padding: 0;
     display: flex;
@@ -299,7 +302,7 @@ nav.test-5-desktop > ul {
     margin-left: 100px;
 }
 
-nav.test-5-desktop > ul > li:nth-child(n) {
+nav.test-5-desktop>ul>li:nth-child(n) {
     height: 100%;
     padding: 15px 40px;
 
@@ -311,12 +314,12 @@ nav.test-5-desktop > ul > li:nth-child(n) {
 }
 
 
-nav.test-5-desktop > ul > li:nth-child(n):hover {
+nav.test-5-desktop>ul>li:nth-child(n):hover {
     background-color: #FFFFFF;
 
 }
 
-nav.test-5-desktop > ul > li:nth-child(n) > a {
+nav.test-5-desktop>ul>li:nth-child(n)>a {
     font-family: "Lexend", sans-serif;
     font-weight: 600;
     font-size: 15px;
@@ -326,22 +329,105 @@ nav.test-5-desktop > ul > li:nth-child(n) > a {
     text-decoration: none;
 }
 
-nav.test-5-desktop > ul > li:nth-child(n) > a > .down_arrow {
+nav.test-5-desktop>ul>li:nth-child(n)>a>.down_arrow {
     display: inline;
 }
-nav.test-5-desktop > ul > li:nth-child(n) > a > .up_arrow {
+
+nav.test-5-desktop>ul>li:nth-child(n)>a>.up_arrow {
     display: none;
 }
 
-nav.test-5-desktop > ul > li:nth-child(n):hover > a > .down_arrow {
+nav.test-5-desktop>ul>li:nth-child(n):hover>a>.down_arrow {
     display: none;
 }
-nav.test-5-desktop > ul > li:nth-child(n):hover > a > .up_arrow {
+
+nav.test-5-desktop>ul>li:nth-child(n):hover>a>.up_arrow {
     display: inline;
 }
-nav.test-5-desktop > ul > li:nth-child(n):hover > a {
+
+nav.test-5-desktop>ul>li:nth-child(n):hover>a {
     color: black;
 }
+
+#shop-desktop {
+    position: relative;
+}
+
+#shop-desktop-dropdown {
+    display: block;
+    position: absolute;
+    top: 50px;
+    left: -577.5px;
+    right: 0;
+    width: 100vw;
+    height: 406px;
+    z-index: 1000;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+/* Show the submenu on hover */
+#shop-desktop:hover #shop-desktop-dropdown {
+    /* display: block; */
+}
+
+.shop-desktop-dropdown-container {
+    width: 100%;
+    height: 100%;
+    padding-inline: 22px;
+    display: flex;
+}
+
+.shop-desktop-dropdown-container > div:nth-child(n) {
+    width: 25%;
+    height: 100%;
+    padding: 22px;
+}
+
+.shop-desktop-dropdown-container > div:not(:last-child) {
+    border-right: 1px solid #D9D9D9;
+}
+.test-5-poster-container {
+    padding-inline: 78px !important;
+    width: 30% !important;
+}
+.test-5-poster-container > .test-5-image-container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    color: white;
+}
+
+.test-5-poster-content {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    width: 100%;
+
+    background-image: linear-gradient(to top, #000000c9, transparent);
+
+}
+
+.test-5-new-arrivals-text {
+    font-family: "Lexend", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+
+    text-transform: uppercase;
+}
+
+.test-5-poster-content > a {
+    font-family: "Lexend", sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 30px;
+    text-align: center;
+    color: inherit;
+    text-transform: uppercase;
+}
+
 @media (max-width: 1010px) {
 
     .test-5-logo {
@@ -355,6 +441,7 @@ nav.test-5-desktop > ul > li:nth-child(n):hover > a {
     .test-5-user-icon>img {
         height: 15px;
     }
+
     .test-5-cart-icon>img {
         height: 18px;
     }
@@ -369,10 +456,9 @@ nav.test-5-desktop > ul > li:nth-child(n):hover > a {
         display: none;
     }
 
-    .test-5-menu-bars  {
+    .test-5-menu-bars {
         display: flex;
     }
 
 
 }
-
