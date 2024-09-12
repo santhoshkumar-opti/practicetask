@@ -481,6 +481,48 @@ nav.test-5-desktop>ul>li:nth-child(n):hover>a {
     color: #000000;
 }
 
+.test-5-main-categories-container {
+    padding-inline: 0px !important;
+}
+
+.test-5-main-categories-container > ul {
+    padding: 0px;
+    padding-block: 20px;
+    list-style: none;
+    height: 100%;
+    width: 100%;
+}
+
+.test-5-main-categories-container > ul > li:nth-child(n)  {
+    padding-left: 52px;
+    padding-block: 10px;
+    padding-right: 44px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.test-5-main-categories-container > ul > li:nth-child(n):hover  {
+    background: #EFEFEF;
+}
+
+.test-5-main-categories-container > ul > li:nth-child(n) > a {
+    width: 100%;
+    display: inline-block;
+    text-decoration: none;
+
+    font-family: "Lexend", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: start;
+    color: #000000;
+}
+
+.right-arrow {
+    rotate: 90deg;
+}
 @media (max-width: 1010px) {
 
     .test-5-logo {
