@@ -151,6 +151,11 @@
     width: 100%;
     background-color: #000000;
 }
+.test-5-sub-navbar-container {
+    height: 50px;
+    width: 100%;
+    background-color: #2F2F2F;
+}
 
 .main-container-1 {
     max-width: 1230px;
@@ -277,6 +282,65 @@
 .test-5-menu-bars > hr:not(:last-child) {
     margin-bottom: 6px;
 
+}
+nav.test-5-desktop {
+    width: fit-content;
+    height: 100%;
+    margin: auto;
+}
+nav.test-5-desktop > ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    margin-left: 100px;
+}
+
+nav.test-5-desktop > ul > li:nth-child(n) {
+    height: 100%;
+    padding: 15px 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+
+nav.test-5-desktop > ul > li:nth-child(n):hover {
+    background-color: #FFFFFF;
+
+}
+
+nav.test-5-desktop > ul > li:nth-child(n) > a {
+    font-family: "Lexend", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18.75px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+
+nav.test-5-desktop > ul > li:nth-child(n) > a > .down_arrow {
+    display: inline;
+}
+nav.test-5-desktop > ul > li:nth-child(n) > a > .up_arrow {
+    display: none;
+}
+
+nav.test-5-desktop > ul > li:nth-child(n):hover > a > .down_arrow {
+    display: none;
+}
+nav.test-5-desktop > ul > li:nth-child(n):hover > a > .up_arrow {
+    display: inline;
+}
+nav.test-5-desktop > ul > li:nth-child(n):hover > a {
+    color: black;
 }
 @media (max-width: 1010px) {
 
