@@ -62,6 +62,17 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  // Add click event listner to navigator sub catagories
+  shopItem.addEventListener("click", function () {
+    if (!checkMobileSize(mobileResponsive)) {
+      return;
+    }
+
+    if (subMenu) {
+      subMenu.classList.add('test-5-dropdown-menu-mobile');
+    }
+  });
+
   // Add event listener to hide sub-menu on mouseout
   shopItem.addEventListener("mouseleave", function (event) {
     if (checkMobileSize(mobileResponsive)) {
@@ -92,6 +103,10 @@ document.addEventListener("DOMContentLoaded", function () {
   mainCategories.forEach((category) => {
     category.addEventListener("mouseover", () => {
       subCategories.innerHTML = "";
+
+      if (checkMobileSize(mobileResponsive)) {
+        return;
+      }
 
       const categoryId = category.getAttribute("data-category");
 
