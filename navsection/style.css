@@ -329,21 +329,44 @@ nav.test-5-desktop>ul>li:nth-child(n)>a {
     text-decoration: none;
 }
 
-nav.test-5-desktop>ul>li:nth-child(n)>a>.down_arrow {
+#shop-desktop > a >.down_arrow {
+    display: inline;
+}
+#shop-desktop > a >.up_arrow {
+    display: none;
+}
+
+#shop-desktop.hover-active {
+    background-color: #FFFFFF;
+}
+
+#shop-desktop.hover-active > a {
+    color: black;
+}
+
+#shop-desktop.hover-active > a >.down_arrow {
+    display: none;
+}
+#shop-desktop.hover-active > a >.up_arrow {
+    display: inline;
+}
+
+
+/* nav.test-5-desktop>ul>li:nth-child(n)>a>.down_arrow {
     display: inline;
 }
 
 nav.test-5-desktop>ul>li:nth-child(n)>a>.up_arrow {
     display: none;
-}
+} */
 
-nav.test-5-desktop>ul>li:nth-child(n):hover>a>.down_arrow {
+/* nav.test-5-desktop>ul>li:nth-child(n):hover>a>.down_arrow {
     display: none;
 }
 
 nav.test-5-desktop>ul>li:nth-child(n):hover>a>.up_arrow {
     display: inline;
-}
+} */
 
 nav.test-5-desktop>ul>li:nth-child(n):hover>a {
     color: black;
@@ -356,8 +379,8 @@ nav.test-5-desktop>ul>li:nth-child(n):hover>a {
 #shop-desktop-dropdown {
     display: none;
     position: absolute;
-    top: 50px;
-    left: -577.5px;
+    top: 140px;
+    left: 0;
     right: 0;
     width: 100vw;
     height: 0px;
@@ -367,10 +390,10 @@ nav.test-5-desktop>ul>li:nth-child(n):hover>a {
 }
 
 /* Show the submenu on hover */
-#shop-desktop:hover #shop-desktop-dropdown {
+/* #shop-desktop:hover #shop-desktop-dropdown {
     display: block;
     height: 406px;
-}
+} */
 
 
 .test-5-dynamic-cotegories-container {

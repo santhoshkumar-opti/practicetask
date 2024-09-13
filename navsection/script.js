@@ -39,24 +39,25 @@ function createListItem(parent, text) {
 
 document.addEventListener("DOMContentLoaded", function () {
   // Get all menu items
-  //   const shopItem = document.querySelector("#shop-desktop");
-  //   const subMenu = document.querySelector("#shop-desktop-dropdown");
-
-  //   subMenu.style.width = `${window.innerWidth}px`;
-
-  //   // Add event listeners to show sub-menu on mouseover
-  //   shopItem.addEventListener("mouseover", function () {
-  //     console.dir(this);
-  //     if (subMenu) {
-  //       subMenu.style.display = "block";
-  //     }
-  //   });
-  //   // Add event listener to hide sub-menu on mouseout
-  //   shopItem.addEventListener("mouseout", function () {
-  //     if (subMenu) {
-  //       subMenu.style.display = "none";
-  //     }
-  //   });
+    const shopItem = document.querySelector("#shop-desktop");
+    const subMenu = document.querySelector("#shop-desktop-dropdown");
+    // Add event listeners to show sub-menu on mouseover
+    shopItem.addEventListener("mouseover", function () {
+      shopItem.classList.add('hover-active')      
+      if (subMenu) {
+        subMenu.style.display = "block";
+        subMenu.style.height = '406px'
+      }
+    });
+    
+    // Add event listener to hide sub-menu on mouseout
+    subMenu.addEventListener("mouseleave", function () {
+      shopItem.classList.remove('hover-active')      
+      if (subMenu) {
+        subMenu.style.display = "none";
+        subMenu.style.height = '0px'
+      }
+    });
 
   const mainCategories = document.querySelectorAll(
     "#test-5-main-categories-list > li:nth-child(n)"
