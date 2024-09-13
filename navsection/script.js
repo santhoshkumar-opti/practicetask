@@ -46,14 +46,13 @@ document.addEventListener("DOMContentLoaded", function () {
     "#test-5-main-categories-list > li:nth-child(n)"
   );
   const subCategories = document.querySelector("#test-5-sub-categories-list");
-  const humburger = document.querySelector('.test-5-menu-bars');
-  const humburgerClose = document.querySelector('.test-5-menu-close');
-  const subNavBar = document.querySelector('#test-5-sub-navbar');
+  const humburger = document.querySelector(".test-5-menu-bars");
+  const humburgerClose = document.querySelector(".test-5-menu-close");
+  const subNavBar = document.querySelector("#test-5-sub-navbar");
   // Add event listeners to show sub-menu on mouseover
   shopItem.addEventListener("mouseover", function () {
-
     if (checkMobileSize(mobileResponsive)) {
-      return
+      return;
     }
 
     shopItem.classList.add("hover-active");
@@ -66,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Add event listener to hide sub-menu on mouseout
   shopItem.addEventListener("mouseleave", function (event) {
     if (checkMobileSize(mobileResponsive)) {
-      return
+      return;
     }
     if (!subMenu.contains(event.toElement)) {
       shopItem.classList.remove("hover-active");
@@ -79,9 +78,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Add event listener to hide sub-menu on mouseleave
   subMenu.addEventListener("mouseleave", function () {
-    
     if (checkMobileSize(mobileResponsive)) {
-      return
+      return;
     }
 
     shopItem.classList.remove("hover-active");
@@ -106,9 +104,8 @@ document.addEventListener("DOMContentLoaded", function () {
   document
     .querySelector(".test-5-dynamic-cotegories-container")
     .addEventListener("mouseleave", () => {
-      
       if (checkMobileSize(mobileResponsive)) {
-        return
+        return;
       }
 
       subCategories.innerHTML = "";
@@ -126,19 +123,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.onresize = reportWindowSize;
 
-
-  humburger.addEventListener('click' , () => {
-    humburgerClose.style.display = 'flex';
-    document.body.classList.add('test-5-mobile-body');
-    subNavBar.classList.add('test-5-sub-navbar-container-mobile');
-  })
-  humburgerClose.addEventListener('click' , () => {
-    humburgerClose.style.display = 'none';
-    document.body.classList.remove('test-5-mobile-body');
-    subNavBar.classList.remove('test-5-sub-navbar-container-mobile');
-  })
+  humburger.addEventListener("click", () => {
+    humburgerClose.style.display = "flex";
+    document.body.classList.add("test-5-mobile-body");
+    subNavBar.classList.add("test-5-sub-navbar-container-mobile");
+  });
+  humburgerClose.addEventListener("click", () => {
+    humburgerClose.style.display = "none";
+    document.body.classList.remove("test-5-mobile-body");
+    subNavBar.classList.remove("test-5-sub-navbar-container-mobile");
+  });
 });
-
 
 function checkMobileSize(value) {
   return window.innerWidth <= value;
