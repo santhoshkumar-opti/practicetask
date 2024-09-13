@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
   function reportWindowSize() {
-    if (shopItem && subMenu) {
+    if (shopItem && subMenu && window.innerWidth <= 1010) {
       if (shopItem.className.includes("hover-active")) {
         shopItem.classList.remove("hover-active");
         subMenu.style.display = "none";

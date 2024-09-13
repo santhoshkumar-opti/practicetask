@@ -581,6 +581,8 @@ nav.test-5-desktop>ul>li:nth-child(n):hover>a {
     }
 }
 
+
+/* mobile reponsive */
 @media (max-width: 1010px) {
 
     .test-5-logo {
