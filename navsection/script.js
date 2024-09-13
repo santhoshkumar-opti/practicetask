@@ -41,6 +41,10 @@ document.addEventListener("DOMContentLoaded", function () {
   // Get all menu items
   const shopItem = document.querySelector("#shop-desktop");
   const subMenu = document.querySelector("#shop-desktop-dropdown");
+  const mainCategories = document.querySelectorAll(
+    "#test-5-main-categories-list > li:nth-child(n)"
+  );
+  const subCategories = document.querySelector("#test-5-sub-categories-list");
   // Add event listeners to show sub-menu on mouseover
   shopItem.addEventListener("mouseover", function () {
     shopItem.classList.add("hover-active");
@@ -61,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Add event listener to hide sub-menu on mouseout
+  // Add event listener to hide sub-menu on mouseleave
   subMenu.addEventListener("mouseleave", function () {
     shopItem.classList.remove("hover-active");
     if (subMenu) {
@@ -69,13 +73,6 @@ document.addEventListener("DOMContentLoaded", function () {
       subMenu.style.height = "0px";
     }
   });
-
-  const mainCategories = document.querySelectorAll(
-    "#test-5-main-categories-list > li:nth-child(n)"
-  );
-  const subCategories = document.querySelector("#test-5-sub-categories-list");
-
-  console.log(mainCategories);
 
   mainCategories.forEach((category) => {
     category.addEventListener("mouseover", () => {
