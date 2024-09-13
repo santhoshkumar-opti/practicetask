@@ -104,7 +104,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   shopBack.addEventListener("click", () => {
-    console.log("asdfasf");
     resetSubcatagoryAndRemoveClass();
   });
 
@@ -171,17 +170,7 @@ document.addEventListener("DOMContentLoaded", function () {
       subCategories.innerHTML = "";
     });
 
-  function reportWindowSize() {
-    if (shopItem && subMenu && window.innerWidth <= 1010) {
-      if (shopItem.className.includes("hover-active")) {
-        shopItem.classList.remove("hover-active");
-        subMenu.style.display = "none";
-        subMenu.style.height = "0px";
-      }
-    }
-  }
 
-  window.onresize = reportWindowSize;
 
   humburger.addEventListener("click", () => {
     humburgerClose.style.display = "flex";
@@ -209,6 +198,25 @@ document.addEventListener("DOMContentLoaded", function () {
     // hide the submenu
     subMenu.classList.remove("test-5-dropdown-menu-mobile");
   }
+
+  function reportWindowSize() {
+    // from desktop to mobile responsive
+    if (shopItem && subMenu && window.innerWidth <= 1010) {
+      if (shopItem.className.includes("hover-active")) {
+        shopItem.classList.remove("hover-active");
+        subMenu.style.display = "none";
+        subMenu.style.height = "0px";
+      }
+    }
+
+    if (window.innerWidth > 1010) {
+      if (document.body.className.includes("test-5-mobile-body")) {
+        resetEntireMobileResponsive();
+      }
+    }
+  }
+
+  window.onresize = reportWindowSize;
 });
 
 function checkMobileSize(value) {
