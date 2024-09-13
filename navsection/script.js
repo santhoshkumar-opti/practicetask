@@ -91,4 +91,16 @@ document.addEventListener("DOMContentLoaded", function () {
     .addEventListener("mouseleave", () => {
       subCategories.innerHTML = "";
     });
+
+  function reportWindowSize() {
+    if (shopItem && subMenu) {
+      if (shopItem.className.includes("hover-active")) {
+        shopItem.classList.remove("hover-active");
+        subMenu.style.display = "none";
+        subMenu.style.height = "0px";
+      }
+    }
+  }
+
+  window.onresize = reportWindowSize;
 });
