@@ -663,8 +663,8 @@ nav.test-5-desktop > ul > li:nth-child(n):hover > a {
 }
 
 #shop-desktop-dropdown.test-5-dropdown-menu-mobile {
-  display: block;
-  height: 100%;
+  display: block !important;
+  height: 100% !important;
   z-index: 300000;
   background: white;
   top: 73px;
