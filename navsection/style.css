@@ -268,6 +268,7 @@
     height: 90%;
     margin-right: 0px;
     padding: 0px;
+    cursor: pointer;
 }
 
 .test-5-menu-bars>hr:nth-child(n) {
@@ -571,6 +572,78 @@ nav.test-5-desktop>ul>li:nth-child(n):hover>a {
     rotate: 90deg;
 }
 
+.test-5-menu-close {
+    position: absolute;
+    z-index: 2000;
+    top: 0px;
+    left: 0px;
+    width: 74px;
+    height: 74px;
+    background: white;
+    color: black;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.test-5-menu-close > span {
+    font-size: 24px;
+}
+
+
+.test-5-mobile-body {
+    position: relative;
+    height: 100vh;
+}
+
+.test-5-sub-navbar-container-mobile {
+    position: absolute;
+    display: block !important;
+    top: 74px;
+    left: 0px;
+    height: 100% !important;
+    width: 100% !important;
+    background-color: unset;
+    z-index: 20000;
+}
+
+.test-5-sub-navbar-container-mobile > nav.test-5-desktop {
+    height: fit-content;
+    max-width: 414px;
+    width: 100%;
+
+}
+
+
+.test-5-sub-navbar-container-mobile > nav.test-5-desktop>ul {
+    flex-direction: column;
+    margin-left: 0px;
+    margin-top: 20px;
+}
+
+.test-5-sub-navbar-container-mobile > nav.test-5-desktop>ul>li:nth-child(n) {
+    width: 100%;
+    justify-content: space-between;
+    padding: 15px 24px;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.test-5-sub-navbar-container-mobile > nav.test-5-desktop>ul>li:nth-child(n)>a {
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.test-5-sub-navbar-container-mobile > nav.test-5-desktop>ul> li#shop-desktop > a > img:nth-child(n) {
+    display: none;
+}
+#shop-desktop > img {
+    display: none;
+}
+.test-5-sub-navbar-container-mobile > nav.test-5-desktop>ul> li#shop-desktop > img {
+    display: block !important;
+}
+
 @media (max-width: 1300px) {
     .test-5-other-pages > ul {
         padding: 23px 18px;
@@ -614,6 +687,20 @@ nav.test-5-desktop>ul>li:nth-child(n):hover>a {
     .test-5-menu-bars {
         display: flex;
     }
+
+    .test-5-main-navbar-container {
+        height: fit-content;
+    }
+
+    .test-5-sub-navbar-container {
+        display: none;
+    }
+
+    .main-container-1 {
+        padding-block: 24px;
+        position: relative;
+    }
+
 
 
 }
