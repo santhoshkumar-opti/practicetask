@@ -1,5 +1,5 @@
 const subMenuList = {
-  1: ["Smartphones", "phone"],
+  1: ["Smartphones", "Phone"],
   2: [
     "Tops",
     "Women's Dresses",
@@ -38,6 +38,31 @@ function createListItem(parent, text) {
   parent.appendChild(li);
 }
 
+// Function to toggle accordion sections
+function toggleAccordion(categoryId) {
+
+  const allContents = document.querySelectorAll('.test-5-mobile-sub-catagory');
+
+  const currentOpenElement =  Array.from(allContents).find((category) => category.getAttribute("data-category") == categoryId );
+
+  if (!currentOpenElement) {
+    return;
+  }
+  
+  // Check if the clicked section is already open
+  const isCurrentlyOpen = currentOpenElement.style.display === 'block';
+
+  // Close all accordion items
+  allContents.forEach(item => {
+      item.style.display = 'none';
+  });
+
+  // Toggle the clicked section if it was not already open
+  if (!isCurrentlyOpen) {
+    currentOpenElement.style.display = 'block';
+  }
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   // Get all menu items
   const shopItem = document.querySelector("#shop-desktop");
@@ -49,6 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const humburger = document.querySelector(".test-5-menu-bars");
   const humburgerClose = document.querySelector(".test-5-menu-close");
   const subNavBar = document.querySelector("#test-5-sub-navbar");
+  const subMenuAccordianLists = document.querySelectorAll('.test-5-mobile-sub-catagory');
   // Add event listeners to show sub-menu on mouseover
   shopItem.addEventListener("mouseover", function () {
     if (checkMobileSize(mobileResponsive)) {
@@ -101,6 +127,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   mainCategories.forEach((category) => {
+
     category.addEventListener("mouseover", () => {
       subCategories.innerHTML = "";
 
@@ -112,6 +139,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const lists = subMenuList[categoryId];
       lists.forEach((list) => createListItem(subCategories, list));
+    });
+
+    category.addEventListener("click", () => {
+
+      if (!checkMobileSize(mobileResponsive)) {
+        return;
+      }
+
+      const categoryId = category.getAttribute("data-category");
+
+
+      toggleAccordion(categoryId);
     });
   });
 
