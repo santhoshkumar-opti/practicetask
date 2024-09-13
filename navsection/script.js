@@ -40,26 +40,27 @@ function createListItem(parent, text) {
 
 // Function to toggle accordion sections
 function toggleAccordion(categoryId) {
+  const allContents = document.querySelectorAll(".test-5-mobile-sub-catagory");
 
-  const allContents = document.querySelectorAll('.test-5-mobile-sub-catagory');
-
-  const currentOpenElement =  Array.from(allContents).find((category) => category.getAttribute("data-category") == categoryId );
+  const currentOpenElement = Array.from(allContents).find(
+    (category) => category.getAttribute("data-category") == categoryId
+  );
 
   if (!currentOpenElement) {
     return;
   }
-  
+
   // Check if the clicked section is already open
-  const isCurrentlyOpen = currentOpenElement.style.display === 'block';
+  const isCurrentlyOpen = currentOpenElement.style.display === "block";
 
   // Close all accordion items
-  allContents.forEach(item => {
-      item.style.display = 'none';
+  allContents.forEach((item) => {
+    item.style.display = "none";
   });
 
   // Toggle the clicked section if it was not already open
   if (!isCurrentlyOpen) {
-    currentOpenElement.style.display = 'block';
+    currentOpenElement.style.display = "block";
   }
 }
 
@@ -74,7 +75,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const humburger = document.querySelector(".test-5-menu-bars");
   const humburgerClose = document.querySelector(".test-5-menu-close");
   const subNavBar = document.querySelector("#test-5-sub-navbar");
-  const subMenuAccordianLists = document.querySelectorAll('.test-5-mobile-sub-catagory');
+  const subMenuAccordianLists = document.querySelectorAll(
+    ".test-5-mobile-sub-catagory"
+  );
+  const shopBack = document.querySelector("#test-5-shop-back");
+  console.log(subMenuAccordianLists);
   // Add event listeners to show sub-menu on mouseover
   shopItem.addEventListener("mouseover", function () {
     if (checkMobileSize(mobileResponsive)) {
@@ -95,8 +100,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     if (subMenu) {
-      subMenu.classList.add('test-5-dropdown-menu-mobile');
+      subMenu.classList.add("test-5-dropdown-menu-mobile");
     }
+  });
+
+  shopBack.addEventListener("click", () => {
+    console.log("asdfasf");
+    resetSubcatagoryAndRemoveClass();
   });
 
   // Add event listener to hide sub-menu on mouseout
@@ -127,7 +137,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   mainCategories.forEach((category) => {
-
     category.addEventListener("mouseover", () => {
       subCategories.innerHTML = "";
 
@@ -142,13 +151,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     category.addEventListener("click", () => {
-
       if (!checkMobileSize(mobileResponsive)) {
         return;
       }
 
       const categoryId = category.getAttribute("data-category");
-
 
       toggleAccordion(categoryId);
     });
@@ -187,6 +194,16 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.classList.remove("test-5-mobile-body");
     subNavBar.classList.remove("test-5-sub-navbar-container-mobile");
   });
+
+  function resetSubcatagoryAndRemoveClass() {
+    // close all the sub catagory
+    subMenuAccordianLists.forEach((item) => {
+      item.style.display = "none";
+    });
+
+    // hide the submenu
+    subMenu.classList.remove("test-5-dropdown-menu-mobile");
+  }
 });
 
 function checkMobileSize(value) {
