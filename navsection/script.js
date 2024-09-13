@@ -79,7 +79,6 @@ document.addEventListener("DOMContentLoaded", function () {
     ".test-5-mobile-sub-catagory"
   );
   const shopBack = document.querySelector("#test-5-shop-back");
-  console.log(subMenuAccordianLists);
   // Add event listeners to show sub-menu on mouseover
   shopItem.addEventListener("mouseover", function () {
     if (checkMobileSize(mobileResponsive)) {
@@ -190,10 +189,16 @@ document.addEventListener("DOMContentLoaded", function () {
     subNavBar.classList.add("test-5-sub-navbar-container-mobile");
   });
   humburgerClose.addEventListener("click", () => {
+    resetEntireMobileResponsive()
+  });
+
+  function resetEntireMobileResponsive() {
     humburgerClose.style.display = "none";
     document.body.classList.remove("test-5-mobile-body");
     subNavBar.classList.remove("test-5-sub-navbar-container-mobile");
-  });
+
+    resetSubcatagoryAndRemoveClass();
+  }
 
   function resetSubcatagoryAndRemoveClass() {
     // close all the sub catagory
