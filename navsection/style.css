@@ -337,6 +337,7 @@ nav.test-5-desktop > ul > li:nth-child(n):hover > a {
   text-align: center;
   color: inherit;
   text-transform: uppercase;
+  text-decoration: underline;
 }
 
 .test-5-other-pages {
@@ -465,7 +466,7 @@ nav.test-5-desktop > ul > li:nth-child(n):hover > a {
 .test-5-sub-navbar-container-mobile {
   position: absolute;
   display: block !important;
-  top: 74px;
+  top: 54px;
   left: 0px;
   height: 100% !important;
   width: 100% !important;
