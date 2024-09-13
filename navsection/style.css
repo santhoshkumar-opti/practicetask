@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
-
+/* 
 .h-100 {
   height: 100% !important;
 }
@@ -139,7 +139,7 @@
 
 .justify-content-between {
   justify-content: space-between;
-}
+} */
 
 * {
   box-sizing: border-box;
@@ -748,9 +748,9 @@ nav.test-5-desktop > ul > li:nth-child(n):hover > a {
   > .test-5-main-categories-container
   > ul
   > li {
-    padding-inline: 0px;
-    padding-block: 18px;
-    border-bottom: 1px solid #D9D9D9;
+  padding-inline: 0px;
+  padding-block: 18px;
+  border-bottom: 1px solid #d9d9d9;
 }
 
 .test-5-dropdown-menu-mobile
@@ -760,7 +760,7 @@ nav.test-5-desktop > ul > li:nth-child(n):hover > a {
   > ul
   > li
   > img {
-    rotate: 180deg;
+  rotate: 180deg;
 }
 
 .test-5-dropdown-menu-mobile
@@ -769,29 +769,29 @@ nav.test-5-desktop > ul > li:nth-child(n):hover > a {
   > .test-5-main-categories-container
   > ul
   > li:nth-child(n):hover {
-    background: unset;
+  background: unset;
 }
 
 .test-5-mobile-sub-catagory {
-    display: none;
-    padding: 20px 10px;
-    border-bottom: 1px solid #d9d9d9;
+  display: none;
+  padding: 12px 10px;
+  border-bottom: 1px solid #d9d9d9;
 }
 
 .test-5-mobile-sub-catagory > ul {
-    padding: 0px;
-    list-style: none;
+  padding: 0px;
+  list-style: none;
 }
 
 .test-5-mobile-sub-catagory > ul > li:nth-child(n) {
-    font-family: "Lexend", sans-serif;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 28px;
-    text-align: start;
-    color: #000000;
+  font-family: "Lexend", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 28px;
+  text-align: start;
+  color: #000000;
+  cursor: pointer;
 }
-
 
 @media (max-width: 1300px) {
   .test-5-other-pages > ul {
