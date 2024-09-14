@@ -718,7 +718,7 @@ nav.test-5-desktop > ul > li:nth-child(n):hover > a {
     left: -100%;
     height: fit-content !important;
     width: 100% !important;
-    background-color: unset;
+    background-color: white;
     z-index: 20000;
     transition: .85s;
     overflow: hidden;
