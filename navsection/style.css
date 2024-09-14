@@ -8,13 +8,13 @@
 .test-5-main-navbar-container {
   height: 90px;
   width: 100%;
-  background-color: #000000;
+  background-color: #000000 !important;
 }
 
 .test-5-sub-navbar-container {
   height: 50px;
   width: 100%;
-  background-color: #2f2f2f;
+  background-color: #2f2f2f !important;
 }
 
 .main-container-1 {
@@ -96,6 +96,7 @@
   line-height: 20px;
   color: #888888;
   margin: 0px !important;
+  background-color: white !important;
 }
 
 .test-5-search-icon {
@@ -123,7 +124,7 @@
   -webkit-box-align: center;
   align-items: center;
   justify-content: center;
-  background: transparent;
+  background: transparent !important;
   height: 90%;
   margin-right: 0px;
   padding: 0px;
@@ -136,7 +137,7 @@
   width: 100%;
   opacity: 1;
   height: 3px;
-  background: white;
+  background: white !important;
   border-radius: 5px;
   margin-top: 0px;
   margin-bottom: 0px;
@@ -175,7 +176,7 @@ nav.test-5-desktop > ul > li:nth-child(n) {
 }
 
 nav.test-5-desktop > ul > li:nth-child(n):hover {
-  background-color: #ffffff;
+  background-color: #ffffff !important;
 }
 
 nav.test-5-desktop > ul > li:nth-child(n) > a {
@@ -197,7 +198,7 @@ nav.test-5-desktop > ul > li:nth-child(n) > a {
 }
 
 #shop-desktop.hover-active {
-  background-color: #ffffff;
+  background-color: #ffffff !important;
 }
 
 #shop-desktop.hover-active > a {
@@ -371,7 +372,7 @@ nav.test-5-desktop > ul > li:nth-child(n):hover > a {
 }
 
 .test-5-sub-categories-container > ul {
-  list-style: none;
+  list-style: none; 
   padding-top: 42px;
   padding-left: 36px;
   height: 100%;
@@ -419,7 +420,7 @@ nav.test-5-desktop > ul > li:nth-child(n):hover > a {
 }
 
 .test-5-main-categories-container > ul > li:nth-child(n):hover {
-  background: #efefef;
+  background: #efefef !important;
 }
 
 .test-5-main-categories-container > ul > li:nth-child(n) > a {
@@ -450,7 +451,7 @@ nav.test-5-desktop > ul > li:nth-child(n):hover > a {
   left: 0px;
   width: 55px;
   height: 74px;
-  background: white;
+  background: white !important;
   color: black;
   display: none;
   justify-content: center;
@@ -528,7 +529,7 @@ nav.test-5-desktop > ul > li:nth-child(n):hover > a {
   height: 90vh !important;
     /* overflow: auto; */
   z-index: 300000;
-  background: white;
+  background: white !important;
   top: 73px;
 }
 
@@ -601,7 +602,7 @@ nav.test-5-desktop > ul > li:nth-child(n):hover > a {
   > .test-5-dynamic-cotegories-container
   > .test-5-main-categories-container
   > ul {
-  background: #f2f2f2;
+  background: #f2f2f2 !important;
   padding-inline: 20px;
   height: 92%;
   overflow: auto;
@@ -634,7 +635,7 @@ nav.test-5-desktop > ul > li:nth-child(n):hover > a {
   > .test-5-main-categories-container
   > ul
   > li:nth-child(n):hover {
-  background: unset;
+  background: unset !important;
 }
 
 .test-5-mobile-sub-catagory {
@@ -718,7 +719,7 @@ nav.test-5-desktop > ul > li:nth-child(n):hover > a {
     left: -100%;
     height: fit-content !important;
     width: 100% !important;
-    background-color: white;
+    background-color: white !important;
     z-index: 20000;
     transition: .85s;
     overflow: hidden;
@@ -728,4 +729,11 @@ nav.test-5-desktop > ul > li:nth-child(n):hover > a {
     padding-block: 24px;
     position: relative;
   }
+}
+
+
+.test-5-body > div >.test-5-container * {
+	border-radius: unset;
+    background-color: unset;
+     padding: unset;
 }
