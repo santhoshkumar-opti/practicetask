@@ -237,7 +237,7 @@ nav.test-5-desktop > ul > li:nth-child(n):hover > a {
 }
 
 #shop-desktop-dropdown {
-  display: none;
+  display: block;
   position: absolute;
   top: 140px;
   left: 0;
@@ -245,8 +245,12 @@ nav.test-5-desktop > ul > li:nth-child(n):hover > a {
   width: 100vw;
   height: 0px;
   z-index: 1000;
+  overflow: hidden;
+}
+
+.test-5-container:not(.test-5-mobile-body) > #shop-desktop-dropdown {
+  transition: height .2s cubic-bezier(0.6,0,0.4,1);
   border-bottom: 1px solid #d9d9d9;
-  transition: height 0.2s cubic-bezier(0.6, 0, 0.4, 1);
 }
 
 /* Show the submenu on hover */
@@ -458,20 +462,13 @@ nav.test-5-desktop > ul > li:nth-child(n):hover > a {
   font-size: 24px;
 }
 
-.test-5-mobile-body {
+.test-5-container {
   position: relative;
-  height: 100vh;
 }
 
 .test-5-sub-navbar-container-mobile {
-  position: absolute;
-  display: block !important;
-  top: 54px;
-  left: 0px;
-  height: 100% !important;
-  width: 100% !important;
-  background-color: unset;
-  z-index: 20000;
+  left: 0px !important;
+  transition: .35s !important;
 }
 
 .test-5-sub-navbar-container-mobile > nav.test-5-desktop {
@@ -528,7 +525,8 @@ nav.test-5-desktop > ul > li:nth-child(n):hover > a {
 
 #shop-desktop-dropdown.test-5-dropdown-menu-mobile {
   display: block !important;
-  height: 100% !important;
+  height: 90vh !important;
+    /* overflow: auto; */
   z-index: 300000;
   background: white;
   top: 73px;
@@ -605,6 +603,8 @@ nav.test-5-desktop > ul > li:nth-child(n):hover > a {
   > ul {
   background: #f2f2f2;
   padding-inline: 20px;
+  height: 92%;
+  overflow: auto;
 }
 
 .test-5-dropdown-menu-mobile
@@ -671,6 +671,11 @@ nav.test-5-desktop > ul > li:nth-child(n):hover > a {
 
 /* mobile reponsive */
 @media (max-width: 1010px) {
+
+  .test-5-container:not(.test-5-mobile-body) > #shop-desktop-dropdown {
+    transition: unset;
+    border-bottom: unset;
+  }
   .test-5-logo {
     height: 22px;
   }
@@ -706,7 +711,17 @@ nav.test-5-desktop > ul > li:nth-child(n):hover > a {
   }
 
   .test-5-sub-navbar-container {
-    display: none;
+    /* display: none; */
+    position: absolute;
+    display: block !important;
+    top: 74px;
+    left: -100%;
+    height: fit-content !important;
+    width: 100% !important;
+    background-color: unset;
+    z-index: 20000;
+    transition: .85s;
+    overflow: hidden;
   }
 
   .main-container-1 {

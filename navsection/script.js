@@ -52,7 +52,7 @@ function toggleAccordion(categoryId) {
 }
 
 // Initialize event listeners and handle DOM content
- function handleTransitions () {
+function handleTransitions() {
   const shopItem = document.querySelector("#shop-desktop");
   const subMenu = document.querySelector("#shop-desktop-dropdown");
   const mainCategories = document.querySelectorAll(
@@ -66,6 +66,7 @@ function toggleAccordion(categoryId) {
     ".test-5-mobile-sub-catagory"
   );
   const shopBack = document.querySelector("#test-5-shop-back");
+  const maincontainerElement = document.querySelector(".test-5-container");
 
   // Show sub-menu on mouseover for desktop
   shopItem.addEventListener("mouseover", function () {
@@ -73,7 +74,7 @@ function toggleAccordion(categoryId) {
 
     shopItem.classList.add("hover-active");
     if (subMenu) {
-      subMenu.style.display = "block";
+      //   subMenu.style.display = "block";
       subMenu.style.height = "406px";
     }
   });
@@ -99,8 +100,8 @@ function toggleAccordion(categoryId) {
     if (!subMenu.contains(event.toElement)) {
       shopItem.classList.remove("hover-active");
       if (subMenu) {
-        subMenu.style.display = "none";
-        subMenu.style.height = "0px";
+        // subMenu.style.display = "none";
+        subMenu.style.height = "";
       }
     }
   });
@@ -111,8 +112,8 @@ function toggleAccordion(categoryId) {
 
     shopItem.classList.remove("hover-active");
     if (subMenu) {
-      subMenu.style.display = "none";
-      subMenu.style.height = "0px";
+      //   subMenu.style.display = "none";
+      subMenu.style.height = "";
     }
   });
 
@@ -149,7 +150,8 @@ function toggleAccordion(categoryId) {
   // Show mobile menu
   humburger.addEventListener("click", () => {
     humburgerClose.style.display = "flex";
-    document.body.classList.add("test-5-mobile-body");
+    document.body.style.overflow = "hidden";
+    maincontainerElement.classList.add("test-5-mobile-body");
     subNavBar.classList.add("test-5-sub-navbar-container-mobile");
   });
 
@@ -161,7 +163,8 @@ function toggleAccordion(categoryId) {
   // Reset mobile menu and submenu
   function resetEntireMobileResponsive() {
     humburgerClose.style.display = "none";
-    document.body.classList.remove("test-5-mobile-body");
+    document.body.style.overflow = "";
+    maincontainerElement.classList.remove("test-5-mobile-body");
     subNavBar.classList.remove("test-5-sub-navbar-container-mobile");
     resetSubcatagoryAndRemoveClass();
   }
@@ -179,22 +182,29 @@ function toggleAccordion(categoryId) {
   // Handle window resize to adjust menu display
   function reportWindowSize() {
     if (shopItem && subMenu && window.innerWidth <= mobileResponsive) {
+      maincontainerElement.classList.add("test-5-mobile-body");
+
       if (shopItem.classList.contains("hover-active")) {
         shopItem.classList.remove("hover-active");
-        subMenu.style.display = "none";
-        subMenu.style.height = "0px";
+        subMenu.style.height = "";
       }
     }
 
     if (window.innerWidth > mobileResponsive) {
-      if (document.body.classList.contains("test-5-mobile-body")) {
+      if (maincontainerElement.classList.contains("test-5-mobile-body")) {
         resetEntireMobileResponsive();
       }
     }
   }
 
   window.onresize = reportWindowSize;
-};
+
+  // on initial page loaded
+  if (window.innerWidth <= mobileResponsive) {
+    console.log("sasdfas");
+    maincontainerElement.classList.add("test-5-mobile-body");
+  }
+}
 
 // Check if the current window width is below or equal to the specified value
 function checkMobileSize(value) {
@@ -202,11 +212,10 @@ function checkMobileSize(value) {
 }
 
 function createBaseElement() {
-
-  if (!document.querySelector('.test-5-container')) {
+  if (!document.querySelector(".test-5-container")) {
     const maincontainerElement = document.createElement("div");
     maincontainerElement.className = "test-5-container";
-  
+
     const htmlInsert = `
     <div class="test-5-main-navbar-container">
               <div class="main-container-1">
@@ -221,7 +230,7 @@ function createBaseElement() {
                       <hr />
                   </div>
                   <div>
-                      <img src="./assets/logo.png" class="test-5-logo" alt="Optiphoenix logo" />
+                      <img src="./assets/logo.png" class="test-5-logo" height="22" alt="Optiphoenix logo" />
                   </div>
                   <div class="test-5-search-container">
                       <input type="text" class="test-5-search-input" placeholder="Search Products" />
@@ -229,13 +238,13 @@ function createBaseElement() {
                   </div>
                   <div class="test-5-icons-container">
                       <div class="test-5-search-mobile-icon">
-                          <img src="./assets/search_mobile.png" alt="mobile responsive search icon" />
+                          <img src="./assets/search_mobile.png" height="14" alt="mobile responsive search icon" />
                       </div>
                       <div class="test-5-user-icon">
-                          <img src="./assets/user.png" alt="user-profile" />
+                          <img src="./assets/user.png" height="15" alt="user-profile" />
                       </div>
                       <div class="test-5-cart-icon">
-                          <img src="./assets/cart.png" alt="cart" />
+                          <img src="./assets/cart.png" height="18" alt="cart" />
                           <div class="test-5-cart-count">
                               <p>2</p>
                           </div>
@@ -448,8 +457,7 @@ function createBaseElement() {
           </div>`;
     maincontainerElement.innerHTML = htmlInsert;
     document.body.appendChild(maincontainerElement);
-  
-  
+
     handleTransitions();
   }
 }
