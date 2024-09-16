@@ -2,6 +2,7 @@
 
 * {
   margin: 0;
+  box-sizing: border-box;
 }
 
 .test-6-footer-section {
@@ -24,6 +25,7 @@
   height: 100%;
   width: 100%;
   display: block;
+  color: white;
 }
 
 
@@ -38,4 +40,24 @@
 
 .test-6-footer-section .test-6-copyrights-container {
   background-color: #434343 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 6.5px;
+  padding-bottom: 10.7px;
+}
+
+.test-6-footer-section .test-6-copyrights-container > p {
+  font-family: "Lexend", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 22px;
+  text-align: center;
+  margin: 0px;
+}
+
+@media (max-width: 1010px) { 
+  .test-6-footer-section .test-6-copyrights-container > p {
+    font-size: 10px;
+  }
 }
