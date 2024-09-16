@@ -5,8 +5,11 @@
   box-sizing: border-box;
 }
 
-.test-6-footer-section {
+.test-6-footer-section #root {
   /* height: 100vh; */
+   border-radius: unset;
+  background-color: unset;
+  padding: unset;
 }
 
 .test-6-footer-section .reset-div {
@@ -147,6 +150,7 @@
   line-height: 22px;
   color: black;
   border: none;
+  margin: 0 !important;
 }
 
 .test-6-footer-section .org-newsletter-join-button {
@@ -207,6 +211,7 @@
   line-height: 24px;
   text-align: start;
   text-transform: uppercase;
+  margin: 0px;
 }
 
 .test-6-footer-section .org-submenu-list-container > ul {
@@ -226,6 +231,7 @@
 .test-6-footer-section .down-arrow,
 .test-6-footer-section .up-arrow {
   display: none;
+  width: 7.5px;
 }
 
 .test-6-footer-section
