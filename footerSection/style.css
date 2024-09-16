@@ -133,7 +133,7 @@
 
 .test-6-footer-section .org-newsletter-join-container {
   position: relative;
-  margin-top: 17px;
+  margin-top: 23px;
   width: 263px;
 }
 
@@ -337,6 +337,7 @@
     width: 100%;
     max-width: 350px;
     margin-inline: auto;
+    margin-top: 17px;
   }
 
   /* menu section */
