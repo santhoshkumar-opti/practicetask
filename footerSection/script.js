@@ -48,10 +48,13 @@ function toggleAccordion(parenNode) {
   const allContents = document.querySelectorAll(".org-menu");
 
   const isCurrentlyOpen = parenNode.className.includes("active");
-
-  allContents.forEach((item) => {
-    item.classList.remove("active");
-  });
+  if (document.querySelectorAll('.org-menu.accordian.active').length > 1) {
+    parenNode.classList[isCurrentlyOpen ? 'remove': 'add']("active");
+  } else {
+    allContents.forEach((item) => {
+      item.classList.remove("active");
+    });
+  }
 
   if (!isCurrentlyOpen) {
     parenNode.classList.add("active");
