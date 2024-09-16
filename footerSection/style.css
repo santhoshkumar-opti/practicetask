@@ -221,6 +221,9 @@
   text-transform: capitalize;
 }
 
+.down-arrow, .up-arrow {
+  display: none;
+}
 @media (max-width: 1010px) {
   .test-6-footer-section .copyrights-container > p {
     font-size: 10px;
