@@ -256,8 +256,9 @@ document.addEventListener("DOMContentLoaded", attachFooterAndListenForEvents(doc
 
 function attachFooterAndListenForEvents(element) {
 
-
-  element.insertAdjacentElement('afterbegin', createFooter())
+  if (!document.querySelector('.footer')) {
+    element.insertAdjacentElement('afterbegin', createFooter())
+  }
 
 
   attachEventListeners()
