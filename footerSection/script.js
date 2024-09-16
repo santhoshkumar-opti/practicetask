@@ -250,11 +250,13 @@ function checkMobileSize(value) {
   return window.innerWidth <= value;
 }
 
-document.addEventListener("DOMContentLoaded", attachFooterAndListenForEvents(document.body));
+// document.addEventListener("DOMContentLoaded", attachFooterAndListenForEvents(document.body));
 
 
 
 function attachFooterAndListenForEvents(element) {
+
+  document.body.classList.add('test-6-footer-section')
 
   if (!document.querySelector('.footer')) {
     element.insertAdjacentElement('afterbegin', createFooter())
