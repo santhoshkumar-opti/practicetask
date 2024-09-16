@@ -49,31 +49,30 @@ function attachEventListeners() {
 function toggleAccordion(parenNode) {
   const allContents = document.querySelectorAll(".org-menu");
 
-  const isCurrentlyOpen = parenNode.className.includes('active');
+  const isCurrentlyOpen = parenNode.className.includes("active");
 
   allContents.forEach((item) => {
-    item.classList.remove('active');
+    item.classList.remove("active");
   });
 
   if (!isCurrentlyOpen) {
-    parenNode.classList.add('active');
+    parenNode.classList.add("active");
   }
 }
 
 // Handle window resize to adjust menu display
 function reportWindowSize() {
-  //   if (shopItem && subMenu && window.innerWidth <= mobileResponsive) {
-  //     maincontainerElement.classList.add("test-5-mobile-body");
-  //     if (shopItem.classList.contains("hover-active")) {
-  //       shopItem.classList.remove("hover-active");
-  //       subMenu.style.height = "";
-  //     }
-  //   }
-  //   if (window.innerWidth > mobileResponsive) {
-  //     if (maincontainerElement.classList.contains("test-5-mobile-body")) {
-  //       resetEntireMobileResponsive();
-  //     }
-  //   }
+  if (checkMobileSize(mobileResponsive)) {
+    // default collapsed
+    document
+      .querySelectorAll(".org-menu")
+      .forEach((value) => value.classList.add("accordian", "active"));
+  }
+  if (window.innerWidth > mobileResponsive) {
+    document
+      .querySelectorAll(".org-menu")
+      .forEach((value) => value.classList.remove("accordian", "active"));
+  }
 }
 
 window.onresize = reportWindowSize;
