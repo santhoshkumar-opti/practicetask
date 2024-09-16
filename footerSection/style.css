@@ -169,6 +169,17 @@
   text-align: center;
 }
 
+.test-6-footer-section .validation-error {
+  font-family: "Lexend", sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 25px;
+  height: 25px;
+  text-align: start;
+  color: #FF0404;
+  margin-left: 15px;
+}
+
 @media (max-width: 1010px) {
   .test-6-footer-section .copyrights-container > p {
     font-size: 10px;
