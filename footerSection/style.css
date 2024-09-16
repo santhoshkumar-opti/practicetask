@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+* {
+  margin: 0;
+}
+
+.test-6-footer-section {
+  /* height: 100vh; */
+}
+
+
+.test-6-footer-section .test-6-reset{
+  border-radius: unset;
+  background-color: unset;
+  padding: unset;
+}
+
+/* By default it will be hiddne */
+.test-6-footer {
+  display: none;
+}
+
+.test-6-footer-section .test-6-footer {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+
+.test-6-footer-section .test-6-footer > div:nth-child(n) {
+  max-width: 1440px;
+  margin-inline: auto;
+}
+
+.test-6-footer-section .test-6-footer-container {
+  background-color: black !important;
+}
+
+.test-6-footer-section .test-6-copyrights-container {
+  background-color: #434343 !important;
+}
