@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
 
 * {
   margin: 0;
@@ -9,8 +9,7 @@
   /* height: 100vh; */
 }
 
-
-.test-6-footer-section .reset-div{
+.test-6-footer-section .reset-div {
   border-radius: unset;
   background-color: unset;
   padding: unset;
@@ -28,7 +27,6 @@
   color: white;
 }
 
-
 .test-6-footer-section .footer > div:nth-child(n) {
   max-width: 1440px;
   margin-inline: auto;
@@ -36,6 +34,13 @@
 
 .test-6-footer-section .footer-info-container {
   background-color: black !important;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-block: 23px;
+  padding-inline: 18px;
 }
 
 .test-6-footer-section .copyrights-container {
@@ -56,8 +61,83 @@
   margin: 0px;
 }
 
-@media (max-width: 1010px) { 
+.test-6-footer-section .org-info-container {
+  width: 25%;
+}
+.test-6-footer-section .org-logo {
+  width: 200px;
+  margin-top: 22px;
+}
+
+.test-6-footer-section .org-address {
+  font-family: "Lexend", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: start;
+  margin-block: 20px;
+  padding-right: 28px;
+}
+
+.test-6-footer-section .org-contact {
+  margin-block: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.test-6-footer-section .org-contact > span {
+  font-family: "Lexend", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: start;
+}
+.test-6-footer-section .org-contact-vertical-line {
+  display: none;
+  width: 1px !important;
+  height: 20px !important;
+  border-left: 1px solid white;
+  margin-inline: 12px;
+}
+
+@media (max-width: 1010px) {
   .test-6-footer-section .copyrights-container > p {
     font-size: 10px;
+  }
+
+  .test-6-footer-section .org-info-container {
+    width: 100%;
+  }
+
+  .test-6-footer-section .footer-info-container {
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+
+    padding-block: 23px;
+    padding-inline: 18px;
+  }
+
+  .test-6-footer-section .org-logo {
+    width: 130px;
+    height: 23.89px;
+    margin-top: 0px;
+    display: block;
+    margin-inline: auto;
+  }
+  .test-6-footer-section .org-address {
+    font-size: 10px;
+    text-align: center;
+    margin-block: 15px;
+    padding-right: 0px;
+  }
+
+  .test-6-footer-section .org-contact {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .test-6-footer-section .org-contact-vertical-line {
+    display: block;
   }
 }
