@@ -10,18 +10,18 @@
 }
 
 
-.test-6-footer-section .test-6-reset{
+.test-6-footer-section .reset-div{
   border-radius: unset;
   background-color: unset;
   padding: unset;
 }
 
-/* By default it will be hiddne */
-.test-6-footer {
+/* By default it will be hidden */
+.footer {
   display: none;
 }
 
-.test-6-footer-section .test-6-footer {
+.test-6-footer-section .footer {
   height: 100%;
   width: 100%;
   display: block;
@@ -29,16 +29,16 @@
 }
 
 
-.test-6-footer-section .test-6-footer > div:nth-child(n) {
+.test-6-footer-section .footer > div:nth-child(n) {
   max-width: 1440px;
   margin-inline: auto;
 }
 
-.test-6-footer-section .test-6-footer-container {
+.test-6-footer-section .footer-container {
   background-color: black !important;
 }
 
-.test-6-footer-section .test-6-copyrights-container {
+.test-6-footer-section .copyrights-container {
   background-color: #434343 !important;
   display: flex;
   justify-content: center;
@@ -47,7 +47,7 @@
   padding-bottom: 10.7px;
 }
 
-.test-6-footer-section .test-6-copyrights-container > p {
+.test-6-footer-section .copyrights-container > p {
   font-family: "Lexend", sans-serif;
   font-weight: 400;
   font-size: 12px;
@@ -57,7 +57,7 @@
 }
 
 @media (max-width: 1010px) { 
-  .test-6-footer-section .test-6-copyrights-container > p {
+  .test-6-footer-section .copyrights-container > p {
     font-size: 10px;
   }
 }
