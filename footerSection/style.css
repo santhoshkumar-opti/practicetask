@@ -105,7 +105,7 @@
 
 /* newsletter */
 .test-6-footer-section .org-newsletter {
-  width: 25%;
+  width: 22%;
   height: 100%;
 }
 
@@ -125,7 +125,7 @@
   font-weight: 400;
   font-size: 13px;
   line-height: 22px;
-  width: 75%;
+  width: 81%;
 }
 
 .test-6-footer-section .org-newsletter-join-container {
@@ -151,7 +151,7 @@
 .test-6-footer-section .org-newsletter-join-button {
   position: absolute;
   top: 5px;
-  right: 92px;
+  right: 51px;
   width: 51px;
   height: 30px;
   outline: none;
