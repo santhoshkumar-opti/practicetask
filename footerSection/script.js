@@ -40,7 +40,7 @@ function createFooter() {
   orgContact.appendChild(emailSpan);
 
   const contactLine = document.createElement('div');
-  contactLine.className = 'org-contact-vertical-line';
+  contactLine.className = 'org-contact-vertical-line reset-div';
   orgContact.appendChild(contactLine);
 
   const phoneSpan = document.createElement('span');
@@ -250,7 +250,7 @@ function checkMobileSize(value) {
   return window.innerWidth <= value;
 }
 
-// document.addEventListener("DOMContentLoaded", attachFooterAndListenForEvents(document.body));
+document.addEventListener("DOMContentLoaded", attachFooterAndListenForEvents(document.body));
 
 
 
