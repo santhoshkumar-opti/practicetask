@@ -193,8 +193,8 @@
 }
 
 .test-6-footer-section .org-menu-tile-container {
-  padding-block: 0.6rem;
-
+  padding-top: 0rem;
+  padding-bottom: 0.6rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -265,6 +265,9 @@
 }
 
 @media (max-width: 1010px) {
+  .test-6-footer-section .org-menu-tile-container {
+    padding-top: 0.6rem;
+  }
   .test-6-footer-section .copyrights-container > p {
     font-size: 10px;
   }
