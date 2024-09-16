@@ -5,9 +5,7 @@ function attachEventListeners() {
   const emailError = document.querySelector("#emailError");
   const joinButton = document.querySelector("#register-newsletter");
 
-  const accordianHeaders = document.querySelectorAll(
-    ".org-menu-tile-container"
-  );
+  const accordianHeaders = document.querySelectorAll(".org-menu-tile-container");
 
   joinButton.addEventListener("click", () => {
     const emailValue = emailInput.value.trim();
