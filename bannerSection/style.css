@@ -49,16 +49,19 @@
 
 /* Desktop Layout */
 .test-7-banner-section .item1 {
+  background: #fdf7f4 !important;
   grid-column: span 2;
   grid-row: 1;
 }
 
 .test-7-banner-section .item2 {
+  background: #e8e2dd !important;
   grid-column: 3;
   grid-row: 1 / span 2;
 }
 
 .test-7-banner-section .item3 {
+  background: #457fa1 !important;
   grid-column: 1;
   grid-row: 2;
 }
