@@ -12,6 +12,10 @@
   padding: unset;
 }
 
+.test-7-banner-section .Main-c__plp {
+	width: 100% !important;
+}
+
 .test-7-banner-section .test-container div {
   border-radius: unset;
   background-color: unset;

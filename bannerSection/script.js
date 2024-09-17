@@ -120,10 +120,7 @@ function createShopLayout() {
   return container;
 }
 
-document.addEventListener(
-  "DOMContentLoaded",
-  addContainerAndEventListener(document.body)
-);
+
 
 function addContainerAndEventListener(element) {
   // adding element class in
@@ -135,3 +132,9 @@ function addContainerAndEventListener(element) {
 
   attachEventListeners();
 }
+
+
+document.addEventListener(
+  "DOMContentLoaded",
+  addContainerAndEventListener(document.body)
+);
