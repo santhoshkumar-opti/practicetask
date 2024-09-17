@@ -544,4 +544,7 @@
     > .slide-title {
     width: 100%;
   }
+  .test-7-banner-section .slide-item-3 > .slide-content-container > .slide-description {
+    margin-bottom: 26px;
+  }
 }
