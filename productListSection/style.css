@@ -5,17 +5,25 @@
   padding: 0;
   box-sizing: border-box;
 }
+.test-container {
+  display: none;
+}
 
-.test-8-product-list-section #root,
+.test-8-product-list-section #root, .test-8-product-list-section .test-container,
 .test-8-product-list-section .test-container div {
   border-radius: unset;
   background-color: unset;
   padding: unset;
 }
 
-.test-container {
-  display: none;
-}
+ .test-8-product-list-section .Main-c__plp {
+ 	width: 100%;
+ }
+
+ .test-8-product-list-section .Main-c__plp .plp__header, .test-8-product-list-section .Main-c__plp .plp__details {
+	display: none;
+} 
+
 .test-8-product-list-section .test-container {
   max-width: 1440px;
   margin-inline: auto;

@@ -141,6 +141,8 @@ function addProducts() {
     isFirstHalfPushed = !isFirstHalfPushed;
 
     duplicatedData = dummyData.slice(...indexs);
+  } else {
+    isFirstHalfPushed = false
   }
 
   duplicatedData.forEach((list) =>
