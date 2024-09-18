@@ -6,15 +6,20 @@
   box-sizing: border-box;
 }
 
-.test-8-product-list-section #root, .test-8-product-list-section  .test-container  div {
+.test-8-product-list-section #root,
+.test-8-product-list-section .test-container div {
   border-radius: unset;
   background-color: unset;
   padding: unset;
 }
 
-.test-8-product-list-section  .test-container {
+.test-container {
+  display: none;
+}
+.test-8-product-list-section .test-container {
   max-width: 1440px;
   margin-inline: auto;
+  display: block;
 }
 
 .title-container h2 {
@@ -27,10 +32,68 @@
   padding: 24px 0px;
 }
 
+/* Tabs container */
+.tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px 0 !important;
+}
+
+.tab {
+  display: inline-block;
+  padding: 10px 20px !important;
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: "Lexend", sans-serif;
+  font-size: 15px;
+  line-height: 18.75px;
+  font-weight: 400;
+  text-align: center;
+}
+/* Active tab */
+.tab.active {
+  border-bottom: 1px solid #000000;
+}
+
+/* Content for each tab */
+.tab-content {
+  display: none;
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin-top: -1px;
+}
+
+/* Show the active content */
+.tab-content.active {
+  display: block;
+}
+
+
 @media (max-width: 1010px) {
   .title-container h2 {
     font-size: 28px;
-    line-height:35px;
+    line-height: 35px;
     padding: 24px 0px;
+  }
+
+  .tabs {
+    /* padding: 10px; */
+    justify-content: start;
+  }
+
+  .tab {
+    padding: 10px !important;
+    font-size: 13px !important;
+  }
+}
+
+
+
+@media (max-width: 799px) {
+  .tabs {
+    justify-content: start;
   }
 }
