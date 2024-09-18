@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Leckerli+One&family=Lexend:wght@100..900&display=swap");
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.test-8-product-list-section #root, .test-8-product-list-section  .test-container  div {
+  border-radius: unset;
+  background-color: unset;
+  padding: unset;
+}
+
+.test-8-product-list-section  .test-container {
+  max-width: 1440px;
+  margin-inline: auto;
+}
+
+.title-container h2 {
+  font-family: "Lexend", sans-serif;
+  font-size: 42px;
+  line-height: 52.5px;
+  font-weight: 600;
+  text-align: center;
+
+  padding: 24px 0px;
+}
+
+@media (max-width: 1010px) {
+  .title-container h2 {
+    font-size: 28px;
+    line-height:35px;
+    padding: 24px 0px;
+  }
+}
