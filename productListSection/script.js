@@ -62,10 +62,9 @@ const dummyData = [
   },
 ];
 
-// Tab functionality
-const tabs = document.querySelectorAll(".tab");
-const productContainer = document.querySelector(".products-container");
-const discoverMoreElement = document.querySelector('#discover-more');
+const mobileResponsive = 1010;
+
+let isFirstHalfPushed = false;
 
 function createProduct(data) {
   // Create the main product container
@@ -132,13 +131,28 @@ function createProduct(data) {
 }
 
 function addProducts() {
-  dummyData.forEach((list) =>
+  const productContainer = document.querySelector(".products-container");
+
+  let duplicatedData = [...dummyData];
+
+  if (checkMobileSize(mobileResponsive)) {
+    const indexs = isFirstHalfPushed ? [4] : [0, 4];
+
+    isFirstHalfPushed = !isFirstHalfPushed;
+
+    duplicatedData = dummyData.slice(...indexs);
+  }
+
+  duplicatedData.forEach((list) =>
     productContainer.appendChild(createProduct(list))
   );
 }
 
-
 function attachEventListeners() {
+  // Tab functionality
+  const tabs = document.querySelectorAll(".tab");
+  const discoverMoreElement = document.querySelector("#discover-more");
+
   tabs.forEach((tab) => {
     tab.addEventListener("click", function () {
       // Remove active class from all tabs
@@ -153,10 +167,97 @@ function attachEventListeners() {
     });
   });
 
-  discoverMoreElement.addEventListener('click', () => {
+  discoverMoreElement.addEventListener("click", () => {
     addProducts();
-  })
+  });
 }
 
-addProducts();
-attachEventListeners();
+function createTrendProductsSection() {
+  // Create the main test container
+  const testContainer = document.createElement("div");
+  testContainer.className = "test-container";
+
+  // Create the title container
+  const titleContainer = document.createElement("div");
+  titleContainer.className = "title-container";
+
+  // Create the title (h2) element
+  const title = document.createElement("h2");
+  title.innerText = "Our Trend Products";
+
+  // Append title to title container
+  titleContainer.appendChild(title);
+
+  // Create the tabs container
+  const tabsContainer = document.createElement("div");
+  tabsContainer.className = "tabs";
+  tabsContainer.id = "tabContainer";
+
+  // Array of tab names
+  const tabs = [
+    "All",
+    "Electronics",
+    "Beauty and Personal Care",
+    "Groceries and Automotive",
+    "Home and Decor",
+    "Fashion and Accessories",
+  ];
+
+  // Create each tab and append to tabs container
+  tabs.forEach((tabName, index) => {
+    const tab = document.createElement("div");
+    tab.className = index === 0 ? "tab active" : "tab";
+    tab.innerText = tabName;
+    tabsContainer.appendChild(tab);
+  });
+
+  // Create the products container
+  const productsContainer = document.createElement("div");
+  productsContainer.className = "products-container";
+
+  // Create the discover more container
+  const discoverContainer = document.createElement("div");
+  discoverContainer.className = "discover-container";
+
+  // Create the discover more paragraph
+  const discoverMore = document.createElement("p");
+  discoverMore.id = "discover-more";
+  discoverMore.innerText = "discover more";
+
+  // Append the discoverMore paragraph to the discover container
+  discoverContainer.appendChild(discoverMore);
+
+  // Append everything to the main test container
+  testContainer.appendChild(titleContainer);
+  testContainer.appendChild(tabsContainer);
+  testContainer.appendChild(productsContainer);
+  testContainer.appendChild(discoverContainer);
+
+  // Append the test container to the body (or another parent element)
+  // document.body.appendChild(testContainer);
+
+  return testContainer;
+}
+
+function createPlpSectionAndAttachEvent(element) {
+  // attach test class in body element
+  document.body.classList.add("test-8-product-list-section");
+
+  if (!document.querySelector(".test-container")) {
+    element.appendChild(createTrendProductsSection());
+  }
+
+  // on initial loaded
+  addProducts();
+  attachEventListeners();
+}
+
+// Check if the current window width is below or equal to the specified value
+function checkMobileSize(value) {
+  return window.innerWidth <= value;
+}
+
+document.addEventListener(
+  "DOMContentLoaded",
+  createPlpSectionAndAttachEvent(document.body)
+);
