@@ -92,7 +92,7 @@
 .product-image-container {
   width: 279px;
   height: 325px;
-  background: #f9f9f9;
+  background: #f9f9f9 !important;
   position: relative;
   overflow: hidden;
 }
