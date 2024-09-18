@@ -1,22 +1,3 @@
-// Tab functionality
-const tabs = document.querySelectorAll(".tab");
-
-tabs.forEach((tab) => {
-  tab.addEventListener("click", function () {
-    // Remove active class from all tabs
-    tabs.forEach((t) => t.classList.remove("active"));
-    // Remove active class from all contents
-
-    // Add active class to clicked tab
-    tab.classList.add("active");
-
-    // Scroll to the active tab if on mobile
-    tab.scrollIntoView({ behavior: "smooth", inline: "center" });
-  });
-});
-
-// https://postimg.cc/gallery/VCY609m
-
 const imagesHolders = {
   favourite: "https://i.postimg.cc/8zzffMNS/favourit.png",
   item1: "https://i.postimg.cc/7ZtG3hZT/item-1-web.png",
@@ -29,6 +10,7 @@ const imagesHolders = {
   item8: "https://i.postimg.cc/hPpfnvx3/item-8-web.png",
 };
 
+// https://postimg.cc/gallery/VCY609m
 const dummyData = [
   {
     main: "electronics",
@@ -79,6 +61,10 @@ const dummyData = [
     image: imagesHolders.item8,
   },
 ];
+
+// Tab functionality
+const tabs = document.querySelectorAll(".tab");
+const productContainer = document.querySelector(".products-container");
 
 function createProduct(data) {
   // Create the main product container
@@ -144,7 +130,29 @@ function createProduct(data) {
   return productContainer;
 }
 
-const productContainer = document.querySelector(".products-container");
+function addProducts() {
+  dummyData.forEach((list) =>
+    productContainer.appendChild(createProduct(list))
+  );
+}
 
 
-dummyData.forEach((list) => productContainer.appendChild(createProduct(list)))
+function attachEventListeners() {
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", function () {
+      // Remove active class from all tabs
+      tabs.forEach((t) => t.classList.remove("active"));
+      // Remove active class from all contents
+
+      // Add active class to clicked tab
+      tab.classList.add("active");
+
+      // Scroll to the active tab if on mobile
+      tab.scrollIntoView({ behavior: "smooth", inline: "center" });
+    });
+  });
+}
+
+
+addProducts();
+attachEventListeners();
