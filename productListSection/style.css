@@ -173,6 +173,16 @@
   margin-right: 15px;
 }
 
+
+@media (max-width: 1250px) {
+  .products-container {
+    grid-template-columns: repeat(
+      3,
+      280px
+    );
+  }
+}
+
 @media (max-width: 1010px) {
   .products-container {
     grid-template-columns: repeat(
