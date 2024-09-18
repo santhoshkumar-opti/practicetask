@@ -13,7 +13,12 @@
 }
 
 .test-7-banner-section .Main-c__plp {
-	width: 100% !important;
+  width: 100% !important;
+}
+
+.test-7-banner-section .plp__header,
+.test-7-banner-section .plp__details {
+  display: none;
 }
 
 .test-7-banner-section .test-container div {
@@ -36,6 +41,10 @@
   display: none;
 }
 
+.test-container {
+  display: none;
+}
+
 .test-7-banner-section .test-container {
   max-width: 1272px;
   margin-inline: auto;
@@ -44,6 +53,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 0px !important;
 }
 
 /* Container styles */
@@ -165,6 +175,7 @@
   line-height: 30px;
   text-align: center;
   width: 64%;
+  margin: 0px;
 }
 .test-7-banner-section .item4 > p:nth-child(2) {
   font-family: "Lexend", sans-serif;
@@ -172,6 +183,7 @@
   font-size: 114px;
   line-height: 142.5px;
   text-align: center;
+  margin: 0px;
 }
 
 .test-7-banner-section .carousel {
@@ -218,7 +230,7 @@
 }
 
 .test-7-banner-section .nav-buttons button {
-  background-color: rgb(255 255 255) !important;
+  background-color: rgb(255, 255, 255) !important;
   color: black;
   border: 1px solid;
   cursor: pointer;
@@ -548,7 +560,13 @@
     > .slide-title {
     width: 100%;
   }
-  .test-7-banner-section .slide-item-3 > .slide-content-container > .slide-description {
+  .test-7-banner-section
+    .slide-item-3
+    > .slide-content-container
+    > .slide-description {
     margin-bottom: 26px;
+  }
+  .test-7-banner-section .item4 > p:first-child {
+    width: 65%;
   }
 }
