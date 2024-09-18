@@ -150,6 +150,7 @@
   text-align: center;
   text-transform: uppercase;
   transition: bottom 0.2s;
+  cursor: pointer;
 }
 
 .product-image-container:hover .product-addcart {
@@ -174,6 +175,7 @@
   text-decoration: underline;
   text-underline-offset: 10px;
   margin-right: 15px;
+  cursor: pointer;
 }
 
 

@@ -65,6 +65,7 @@ const dummyData = [
 // Tab functionality
 const tabs = document.querySelectorAll(".tab");
 const productContainer = document.querySelector(".products-container");
+const discoverMoreElement = document.querySelector('#discover-more');
 
 function createProduct(data) {
   // Create the main product container
@@ -151,8 +152,11 @@ function attachEventListeners() {
       tab.scrollIntoView({ behavior: "smooth", inline: "center" });
     });
   });
-}
 
+  discoverMoreElement.addEventListener('click', () => {
+    addProducts();
+  })
+}
 
 addProducts();
 attachEventListeners();
