@@ -86,6 +86,7 @@
   height: 325px;
   background: #f9f9f9;
   position: relative;
+  overflow: hidden;
 }
 
 .product-image {
@@ -97,6 +98,7 @@
   position: absolute;
   bottom: 20px;
   right: 20px;
+  transition: bottom 0.2s;
 }
 
 .main-catagory {
@@ -131,11 +133,11 @@
 }
 
 .product-addcart {
-  display: none;
+  display: block;
   position: absolute;
   border: none;
   outline: none;
-  bottom: 0px;
+  bottom: -38px;
   left: 0px;
   right: 0px;
   height: 38px;
@@ -147,10 +149,11 @@
   font-weight: 600;
   text-align: center;
   text-transform: uppercase;
+  transition: bottom 0.2s;
 }
 
 .product-image-container:hover .product-addcart {
-  display: block;
+  bottom: 0px;
 }
 .product-image-container:hover .product-favourite {
   bottom: 54px;
@@ -211,11 +214,12 @@
   }
 
   .product-addcart {
-    display: block;
+    bottom: 0px;
   }
 
   .product-favourite {
     bottom: 53px;
+    right: 10px;
   }
 
   .product-image-container {
