@@ -66,7 +66,8 @@ const HTML = `<div class="carousel">
 
                 <div class="content-container">
                     <h3 class="content-title">Urban Elegance</h3>
-                    <p class="content-description">Elevate Your Everyday Look</p>
+                    <p class="content-description">Elevate Your</p>
+                    <p class="content-description">Everyday Look</p>
                     <button class="content-button" type="button">shop now</button>
                 </div>
             </div>
